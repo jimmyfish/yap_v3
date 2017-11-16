@@ -1,0 +1,39 @@
+{
+  "name" : "jimmyfish/silex-skeleton",
+  "description" : "silex skeleton",
+  "require" : {
+    "silex/silex": "^1.3",
+    "dflydev/doctrine-orm-service-provider": "1.0.7",
+    "twig/twig": "^1.23",
+    "monolog/monolog": "^1.17",
+    "swiftmailer/swiftmailer": "^5.4",
+    "symfony/validator": "^2.7",
+    "symfony/translation": "^2.7",
+    "silex/web-profiler": "^1.0",
+    "symfony/form": "^2.7",
+    "symfony/security": "^2.7",
+    "symfony/twig-bridge": "^2.7",
+    "symfony/security-csrf": "^2.7",
+    "symfony/assetic-bundle": "^2.8",
+    "symfony/dependency-injection": "~2.3",
+    "symfony/doctrine-bridge": "^3.0",
+    "symfony/property-info": "^3.0",
+    "symfony/intl": "~2.4",
+    "symfony/finder": "~2.4",
+    "mheap/silex-assetic": "^2.0"
+  },
+  "require-dev": {
+    "behat/behat": "^3.0",
+    "phpspec/phpspec": "^2.3",
+    "symfony/debug": "^2.7",
+    "symfony/var-dumper": "^2.7",
+    "doctrine/data-fixtures": "^1.1"
+  },
+  "license": "MIT",
+  "autoload" : {
+      "psr-4" : {
+        "Jimmy\\Silex\\" : "src/"
+      }
+  },
+  "minimum-stability" : "stable"
+}
