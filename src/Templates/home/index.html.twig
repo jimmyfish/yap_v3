@@ -1,0 +1,436 @@
+{% extends 'layouts/layout.html.twig' %}
+
+{% block title %}Beranda{% endblock %}
+
+{% block content %}
+<!-- Banner -->
+
+<section id="iq-home" class="banner iq-bg iq-bg-fixed iq-box-shadow" style=" background: url({{ app.request.basepath }}/public/assets/img/header_blue.png);">
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <div class="container">
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <div class="banner-text">
+                        <div class="row">
+                            <div class="col-sm-6 col-lg-6 col-md-6">
+                                <h1 class="iq-font-white iq-tw-8 animated fadeInLeft">
+                                    EASY WAY TO PAY
+                                    <small class="iq-font-white iq-tw-5 iq-mt-20">Revolusi teknologi pembayaran dari BNI. Kamu gak usah takut lagi ketinggalan dompet.</small>
+                                </h1>
+                                <div class="link">
+                                    <h5 class="iq-font-white animated fadeInLeft">Tersedia di</h5>
+                                    <ul class="list-inline animated fadeInUp">
+                                        <li><a href="#"><img src="{{ app.request.basepath }}/public/assets/img/Appstore_Badge.png" alt=""></a></li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="{{ app.request.basepath }}/public/assets/img/Playstore_Badge.png" alt="">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-sm-5 col-lg-5 col-md-5 hidden-xs animated fadeInRight">
+                                <div class="iq-mobile-app text-right">
+                                    <div class="iq-mobile-box">
+                                        <img class="iq-mobile-img" src="{{ app.request.basepath}}/public/assets/img/Hp.png" alt="#">
+                                        <span data-depth="0.8" class="layer iq-mobile-icon icon-01" data-bottom="transform:translateX(50px)" data-top="transform:translateX(-100px);">
+                                            <img src="{{ app.request.basepath}}/public/assets/img/1.png" alt="#" class="animated bounceIn">
+                                        </span>
+                                        <span data-depth="0.8" class="layer iq-mobile-icon icon-04" data-bottom="transform:translateX(-30px)" data-top="transform:translateX(0px);">
+                                            <img src="{{ app.request.basepath}}/public/assets/img/3.png" alt="#" class="animated bounceIn">
+                                        </span>
+                                        <span data-depth="0.8" class="layer iq-mobile-icon icon-05" data-bottom="transform:translateX(0px)" data-top="transform:translateX(-50px);">
+                                            <img src="{{ app.request.basepath}}/public/assets/img/2.png" alt="#" class="animated bounceIn">
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Banner End -->
+
+<div class="main-content">
+
+    <!-- Feature -->
+
+    <section id="about-us" class="overview-block-ptb">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="heading-title">
+                        <h2 class="title iq-tw-6">Yap! Kamu bisa bayar-bayar pakai handphone, dengan 3 pilihan sumber dana sesuai keinginan kamu.</h2>
+                        <div class="divider"></div>
+                        <p>Kartu kredit + Debit + UnikQu = YAP!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-4">
+                    <div class="iq-fancy-box text-center">
+                        <img src="{{ app.request.basepath }}/public/assets/img/illustration-2.png" alt="#">
+                        <h4 class="iq-tw-6">Mudah</h4>
+                        <p>Kamu bisa akses uang kamu, dari handphone kamu.</p>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4 re-mt-30">
+                    <div class="iq-fancy-box text-center">
+                        <img src="{{ app.request.basepath }}/public/assets/img/illustration-3.png" alt="#">
+                        <h4 class="iq-tw-6">Aman</h4>
+                        <p>Pembayaran langsung dari Akun bank kamu, tentunya aman.</p>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4 re-mt-30">
+                    <div class="iq-fancy-box text-center">
+                        <img src="{{ app.request.basepath }}/public/assets/img/illustration-4.png" alt="#">
+                        <h4 class="iq-tw-6">Gratis</h4>
+                        <p>Tidak ada biaya untuk setiap transaksi kamu.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature END -->
+
+
+    <!-- About Our App -->
+
+    <section class="iq-about grey-bg iq-mtb-40">
+        <div class="container">
+            <div class="row row-eq-height">
+                <div class="col-sm-12 col-lg-5 col-md-5 iq-about-bg">
+                    <div class="iq-bg about-img popup-gallery play-video">
+                        <img class="img-responsive center-block" src="{{ app.request.basepath }}/public/assets/img/scr3.png" alt="#">
+                        <a href="{{ app.request.basepath }}/public/assets/video/main.mp4" class="iq-video popup-youtube"><i class="ion-ios-play-outline"></i></a>
+                        <div class="iq-waves">
+                            <div class="waves wave-1"></div>
+                            <div class="waves wave-2"></div>
+                            <div class="waves wave-3"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-7 col-md-7 iq-pall-50">
+                    <h2 class="heading-left iq-tw-6 ">Tentang Aplikasi YAP!</h2>
+                    <p>Aplikasi YAP! merupakan suatu solusi metode pembayaran yang memungkinkan Nasabah menjadi inisiator atas transaksi di merchant. Metode pembayaran ini memerlukan media berupa aplikasi mobile yang dimiliki oleh nasabah dan merchant. Metode pembayaran yang digunakan saat transaksi adalah dengan menggunakan QR Code scanner. Aplikasi YAP! telah disediakan dalam Android dan iOS dan setiap device harus terkoneksi dengan jaringan internet</p>
+                    <a class="button iq-mt-15" href="# ">Download Manual Book</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Our App END -->
+
+
+    <!-- Special Features -->
+
+    <section id="features" class="overview-block-ptb iq-amazing-tab white-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="heading-title">
+                        <h2 class="title iq-tw-6">Beragam Kelebihan</h2>
+                        <div class="divider"></div>
+                        <!-- <p>Berkat relasi yang terjalin baik selama bertahun-tahun dengan mitra pembayaran nasional maupun internasional, YAP! dapat menyajikan metode pembayaran terlengkap bahkan menfasilitasi transaksi dengan mata uang asing tertentu yang siap mendukung para merchant memperluas pasar serta meningkatkan pendapatan bisnisnya.</p> -->
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-md-4 col-lg-4">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active wow fadeInLeft" data-wow-duration="1s">
+                            <a class="round-right" href="#design" aria-controls="design" role="tab" data-toggle="tab">
+                                <div class="iq-fancy-box-01 text-right">
+                                    <i aria-hidden="true" class="ion-ios-checkmark-outline"></i>
+                                    <h4 class="iq-tw-6">Widely Acceptance</h4>
+                                    <div class="fancy-content-01">
+                                        <p>Dapat digunakan oleh seluruh nasabah BNI tanpa terkecuali</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li role="presentation" class="wow fadeInLeft" data-wow-duration="1s" >
+                            <a class="round-right" href="#resolution" aria-controls="resolution" role="tab" data-toggle="tab">
+                                <div class="iq-fancy-box-01 text-right">
+                                    <i aria-hidden="true" class="ion-ios-color-wand-outline"></i>
+                                    <h4 class="iq-tw-6">Easy</h4>
+                                    <div class="fancy-content-01">
+                                        <p>Cara pakai yang mudah, hanya dengan Login, Scan dan Bayar</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li role="presentation" class="wow fadeInLeft" data-wow-duration="1s">
+                            <a class="round-right" href="#ready" aria-controls="ready" role="tab" data-toggle="tab">
+                                <div class="iq-fancy-box-01 text-right">
+                                    <i aria-hidden="true" class="ion-ios-copy-outline"></i>
+                                    <h4 class="iq-tw-6">Modern Lifestyle</h4>
+                                    <div class="fancy-content-01">
+                                        <p>Lifestyle masa kini yang ditandai dengan gadget minded</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 text-center hidden-sm hidden-xs">
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="design"><img src="{{ app.request.basepath }}/public/assets/img/screen/screen-4.png" class="img-responsive center-block" alt="#"></div>
+                        <div role="tabpanel" class="tab-pane" id="resolution"><img src="{{ app.request.basepath }}/public/assets/img/screen/screen-1.png" class="img-responsive center-block" alt="#"></div>
+                        <div role="tabpanel" class="tab-pane" id="ready"><img src="{{ app.request.basepath }}/public/assets/img/screen-1.png" class="img-responsive center-block" alt="#"></div>
+                        <div role="tabpanel" class="tab-pane" id="fertures"><img src="{{ app.request.basepath }}/public/assets/img/screen/screen-2.png" class="img-responsive center-block" alt="#"></div>
+                        <div role="tabpanel" class="tab-pane" id="face"><img src="{{ app.request.basepath }}/public/assets/img/screen-1.png" class="img-responsive center-block" alt="#"></div>
+                        <div role="tabpanel" class="tab-pane" id="codes"><img src="{{ app.request.basepath }}/public/assets/img/screen-1.png" class="img-responsive center-block" alt="#"></div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-4">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="wow fadeInRight" data-wow-duration="1s">
+                            <a href="#fertures" aria-controls="fertures" role="tab" data-toggle="tab">
+                                <div class="iq-fancy-box-01">
+                                    <i aria-hidden="true" class="ion-ios-locked-outline"></i>
+                                    <h4 class="iq-tw-6">Secure</h4>
+                                    <div class="fancy-content-01">
+                                        <p>Dua lapis pengamanan : Password login dan pin transaksi</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li role="presentation" class="wow fadeInRight" data-wow-duration="1s">
+                            <a href="#face" aria-controls="face" role="tab" data-toggle="tab">
+                                <div class="iq-fancy-box-01">
+                                    <i aria-hidden="true" class="ion-ios-heart-outline"></i>
+                                    <h4 class="iq-tw-6">Convenient</h4>
+                                    <div class="fancy-content-01">
+                                        <p>Terdapat tiga sumber Dana yaitu dari Kartu Debit, Kartu Kredit dan UniQu</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li role="presentation" class="wow fadeInRight" data-wow-duration="1s">
+                            <a href="#codes" aria-controls="codes" role="tab" data-toggle="tab">
+                                <div class="iq-fancy-box-01">
+                                    <i aria-hidden="true" class="ion-arrow-graph-down-right"></i>
+                                    <h4 class="iq-tw-6">Free</h4>
+                                    <div class="fancy-content-01">
+                                        <p>Bebas biaya operasional</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Features END -->
+
+    <section id="blog" class="overview-block-ptb white-bg iq-blog">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="heading-title">
+                        <h2 class="title iq-tw-6">Promo</h2>
+                        <div class="divider"></div>
+                        <p>Jangan sampai terlewat, selalu cek berbagai promo dan informasi terbaru mengenai YAP! di sini.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-4">
+                    <div class="iq-blog-box">
+                        <div class="iq-blog-image clearfix">
+                            <img class="img-responsive center-block" src="{{ app.request.basepath }}/public/assets/img/blog/1.jpg" alt="#">
+                        </div>
+                        <div class="iq-blog-detail">
+                            <div class="blog-title"> <a href="{{ path('event_detail', {id: 1}) }}"><h5 class="iq-tw-6">DAPATKAN CASHBACK 10% DENGAN YAP!</h5> </a> </div>
+                            <div class="iq-blog-meta">
+                                <ul class="list-inline">
+                                    <li><a href="#"><i class="fa fa-calendar" aria-hidden="true"></i> 12 Aug 2017</a></li>
+                                    <li><a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i> 5</a></li>
+                                </ul>
+                            </div>
+                            <div class="blog-content">
+                                <p>Kamu mendapatkan cashback 10%dengan membeli barang yang ada di minimarket dan supermarket yang ada logo “Available with YAP!”. Promo ini berlaku hingga 31 Desember 2017.</p>
+                            </div>
+                            <div class="blog-button">
+                                <a href="#" class="pull-left iq-tw-6 iq-user"><i class="fa fa-user-circle" aria-hidden="true"></i> Admin</a>
+                                <a href="{{ path('event_detail', {id: 1}) }}" class="pull-right iq-tw-6">Read More <i class="fa fa-angle-right" aria-hidden="true"></i></a> </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4 re-mt-30">
+                    <div class="iq-blog-box">
+                        <div class="iq-blog-image clearfix">
+                            <img class="img-responsive center-block" src="{{ app.request.basepath }}/public/assets/img/blog/2.jpg" alt="#">
+                        </div>
+                        <div class="iq-blog-detail">
+                            <div class="blog-title"> <a href="{{ path('event_detail', {id: 1}) }}"><h5 class="iq-tw-6">INSTALL SEKARANG, DAPATKAN BONUS TOPUP 50.000 DARI YAP !</h5> </a> </div>
+                            <div class="iq-blog-meta">
+                                <ul class="list-inline">
+                                    <li><a href="#"><i class="fa fa-calendar" aria-hidden="true"></i> 12 Aug 2017</a></li>
+                                    <li><a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i> 5</a></li>
+                                </ul>
+                            </div>
+                            <div class="blog-content">
+                                <p>Install aplikasi YAP sekarang dan login dengan akun kamu! Kamu langsung akan dapat topup 50.000 di akun kamu! Promo berlaku hingga 10 Januari 2018</p>
+                            </div>
+                            <div class="blog-button">
+                                <a href="#" class="pull-left iq-tw-6 iq-user"><i class="fa fa-user-circle" aria-hidden="true"></i> Tom Tilak</a>
+                                <a href="{{ path('event_detail', {id: 1}) }}" class="pull-right iq-tw-6">Read More <i class="fa fa-angle-right" aria-hidden="true"></i></a> </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4 re-mt-30">
+                    <div class="iq-blog-box">
+                        <div class="iq-blog-image clearfix">
+                            <img class="img-responsive center-block" src="{{ app.request.basepath }}/public/assets/img/blog/3.jpg" alt="#">
+                        </div>
+                        <div class="iq-blog-detail">
+                            <div class="blog-title"> <a href="{{ path('event_detail', {id: 1}) }}"><h5 class="iq-tw-6">BELANJA DENGAN YAP! DAPATKAN DISKON 5%</h5> </a> </div>
+                            <div class="iq-blog-meta">
+                                <ul class="list-inline">
+                                    <li><a href="#"><i class="fa fa-calendar" aria-hidden="true"></i> 12 Aug 2017</a></li>
+                                    <li><a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i> 5</a></li>
+                                </ul>
+                            </div>
+                            <div class="blog-content">
+                                <p>Dapatkan diskon 5% dengan membeli barang dengan brand Tertentu yang sudah bekerjasama dengan YAP! . Promo berlaku hingga 1 Januari 2018.</p>
+                            </div>
+                            <div class="blog-button">
+                                <a href="#" class="pull-left iq-tw-6 iq-user"><i class="fa fa-user-circle" aria-hidden="true"></i> Admin</a>
+                                <a href="{{ path('event_detail', {id: 1}) }}" class="pull-right iq-tw-6">Read More <i class="fa fa-angle-right" aria-hidden="true"></i></a> </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            {# <div class="jumbotron">
+                <p class="text-center">Segera Hadir...</p>
+            </div> #}
+        </div>
+    </section>
+
+    <!-- <hr> -->
+
+    <!-- <section id="blog" class="overview-block-ptb white-bg iq-blog iq-pt-10">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="heading-title">
+                        <h2 class="title iq-tw-6">Informasi</h2>
+                        <div class="divider"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-4">
+                    <div class="iq-blog-box">
+                        <div class="iq-blog-image clearfix">
+                            <img class="img-responsive center-block" src="{{ app.request.basepath }}/public/assets/images/blog/01.jpg" alt="#">
+                        </div>
+                        <div class="iq-blog-detail">
+                            <div class="blog-title"> <a href="{{ path('event_detail', {id: 1}) }}"><h5 class="iq-tw-6">Cara Bayar Jaman Now!</h5> </a> </div>
+                            <div class="iq-blog-meta">
+                                <ul class="list-inline">
+                                    <li><a href="#"><i class="fa fa-calendar" aria-hidden="true"></i> 12 Aug 2017</a></li>
+                                    <li><a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i> 5</a></li>
+                                </ul>
+                            </div>
+                            <div class="blog-content">
+                                <p>Top up (mengisi ulang) YAP!mu bisa memberikan bonus sebesar 100% dari dana yang kamu isi ke YAP!mu. Syaratnya, kamu ...</p>
+                            </div>
+                            <div class="blog-button">
+                                <a href="#" class="pull-left iq-tw-6 iq-user"><i class="fa fa-user-circle" aria-hidden="true"></i> Admin</a>
+                                <a href="#" class="pull-right iq-tw-6">Read More <i class="fa fa-angle-right" aria-hidden="true"></i></a> </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4 re-mt-30">
+                    <div class="iq-blog-box">
+                        <div class="iq-blog-image clearfix">
+                            <img class="img-responsive center-block" src="{{ app.request.basepath }}/public/assets/images/blog/02.jpg" alt="#">
+                        </div>
+                        <div class="iq-blog-detail">
+                            <div class="blog-title"> <a href="{{ path('event_detail', {id: 1}) }}"><h5 class="iq-tw-6">Mencairkan Poin</h5> </a> </div>
+                            <div class="iq-blog-meta">
+                                <ul class="list-inline">
+                                    <li><a href="#"><i class="fa fa-calendar" aria-hidden="true"></i> 12 Aug 2017</a></li>
+                                    <li><a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i> 5</a></li>
+                                </ul>
+                            </div>
+                            <div class="blog-content">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                            <div class="blog-button">
+                                <a href="#" class="pull-left iq-tw-6 iq-user"><i class="fa fa-user-circle" aria-hidden="true"></i> Tom Tilak</a>
+                                <a href="#" class="pull-right iq-tw-6">Read More <i class="fa fa-angle-right" aria-hidden="true"></i></a> </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4 re-mt-30">
+                    <div class="iq-blog-box">
+                        <div class="iq-blog-image clearfix">
+                            <img class="img-responsive center-block" src="{{ app.request.basepath }}/public/assets/images/blog/03.jpg" alt="#">
+                        </div>
+                        <div class="iq-blog-detail">
+                            <div class="blog-title"> <a href="{{ path('event_detail', {id: 1}) }}"><h5 class="iq-tw-6">Tata cara mengaktifkan akun pada YAP!mu.</h5> </a> </div>
+                            <div class="iq-blog-meta">
+                                <ul class="list-inline">
+                                    <li><a href="#"><i class="fa fa-calendar" aria-hidden="true"></i> 12 Aug 2017</a></li>
+                                    <li><a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i> 5</a></li>
+                                </ul>
+                            </div>
+                            <div class="blog-content">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                            <div class="blog-button">
+                                <a href="#" class="pull-left iq-tw-6 iq-user"><i class="fa fa-user-circle" aria-hidden="true"></i> Admin</a>
+                                <a href="#" class="pull-right iq-tw-6">Read More <i class="fa fa-angle-right" aria-hidden="true"></i></a> </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 text-center">
+                    <a class="button iq-mt-50" href="blog-2-columns.html">Semua Informasi</a>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- App Screenshots -->
+
+    <!-- Frequently Asked Questions -->
+
+    <section class="overview-block-ptb iq-bg iq-bg-fixed iq-over-black-80" style="background: url({{ app.request.basepath }}/public/assets/img/bg-3.png);" >
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="heading-title iq-mb-40">
+                        <h2 class="title iq-tw-6 iq-font-white">Download YAP!</h2>
+                        <div class="divider white"></div>
+                        <p class="iq-font-white">Aplikasi YAP! telah tersedia dalam platform Android dan iOS dan setiap device harus terkoneksi dengan jaringan internet baik melalui data seluler maupun Wifi.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <a class="iq-mr-15" href="# "><img src="{{ app.request.basepath }}/public/assets/img/Playstore_Badge.png" alt="Playstore"></a>
+                    <a class="iq-mr-15 re4-mt-20" href="# "><img src="{{ app.request.basepath }}/public/assets/img/Appstore_Badge.png" alt="Appstore"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+{% endblock %}

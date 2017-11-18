@@ -16,6 +16,7 @@ $app = new \Silex\Application($config['common']);
 
 require 'bootstrap.php';
 
-$app->mount('/', new \Jimmy\Silex\Http\Controller\UserController($app));
+$app->mount('/', new \Jimmy\Yap\Http\Controller\ClientController($app));
+$app->mount('/blog', new \Jimmy\Yap\Http\Controller\BlogController($app));
 
 $app->run();

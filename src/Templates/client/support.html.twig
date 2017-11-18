@@ -1,0 +1,110 @@
+{% extends 'layouts/layout.html.twig' %}
+
+{% block title %}Dukungan{% endblock %}
+
+{% block content %}
+    <!-- Frequently Asked Questions -->
+
+    <section id="support" class="overview-block-ptb banner iq-bg iq-bg-fixed iq-box-shadow" style=" background: url({{ app.request.basepath }}/public/assets/img/header_blue.png);">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="heading-title">
+                            <h2 class="title iq-tw-6">Mengapa YAP!</h2>
+                            <div class="divider"></div>
+                            <p>YAP! adalah aplikasi yang menjadikan pembayaran menjadi lebih mudah. Banyak manfaat yang bisa anda dapatkan ketika mnejadikan YAP! bagian dari hidup anda.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="overview-block-ptb white-bg">
+        <div class="container">
+            <!-- <div class="row">
+                <div class="col-sm-12">
+                    <div class="heading-title">
+                        <h2 class="title iq-tw-6">Mengapa YAP!</h2>
+                        <div class="divider"></div>
+                        <p>YAP! adalah aplikasi yang menjadikan pembayaran menjadi lebih mudah. Banyak manfaat yang bisa anda dapatkan ketika mnejadikan YAP! bagian dari hidup anda.</p>
+                    </div>
+                </div>
+            </div> -->
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <img class="img-responsive center-block" src="{{ app.request.basepath }}/public/assets/img/samsung_and_hand.png" alt="">
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <div class="iq-accordion iq-mt-50">
+                        <div class="ad-block ad-active"><a href="" class="ad-title iq-tw-6 iq-font-grey"> <span
+                                        class="ad-icon"><i class="ion-ios-infinite-outline" aria-hidden="true"></i></span>Kemudahan bertransaksi</a>
+
+                            <div class="ad-details">
+                                <div class="row">
+                                    <!-- <div class="col-sm-3"><img alt="#" class="img-responsive" src="{{ app.request.basepath }}/public/assets/images/faq-1.jpg"></div> -->
+                                    <div class="col-sm-9">Sistem kami didesain untuk memudahkan Konsumen Anda agar bisa bertransaksi secara Mudah, Aman, Nyaman.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ad-block"><a href="#" class="ad-title iq-tw-6 iq-font-grey"> <span class="ad-icon"><i
+                                            class="ion-ios-time-outline" aria-hidden="true"></i></span>Keamanan lebih utama</a>
+                            <div class="ad-details">Kami mengutamakan Keamanan dalam transaksi yang berlangsung dengan Konsumen Anda. Baik dari sisi Anda sebagai merchant ataupun Konsumen.
+                            </div>
+                        </div>
+                        <div class="ad-block"><a href="{{ '#' }}" class="ad-title iq-tw-6 iq-font-grey"> <span class="ad-icon"><i
+                                            class="ion-ios-compose-outline" aria-hidden="true"></i></span>Solusi Pembayaran Online</a>
+                            <div class="ad-details">
+                                <div class="row">
+                                    <div class="col-sm-9">YAP! juga memiliki tools terintegrasi ke e-commerce yang Anda butuhkan sebagai alat pembayaran secara online, dengan transaksi debit, kartu kredit, bahkan penarikan uang.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ad-block"><a href="#" class="ad-title iq-tw-6 iq-font-grey"> <span class="ad-icon"><i
+                                            class="ion-ios-loop" aria-hidden="true"></i></span>Top up deposite mudah</a>
+                            <div class="ad-details">Anda dapat Deposit menggunakan ATM manapun dari 137 BANK di Indonesia.
+Deposit melalui Mobile Banking, Internet Banking, maupun Setor  Tunai.
+                            </div>
+                        </div>
+                        <div class="ad-block"><a href="#" class="ad-title iq-tw-6 iq-font-grey"> <span class="ad-icon"><i
+                                            class="ion-ios-cart-outline" aria-hidden="true"></i></span>Kemudahan transaksi</a>
+                            <div class="ad-details">
+                                <ul style="list-style-type: circle">
+                                    <li>
+                                        Berbelanja pada offline store yang merupakan merchant YAP!mu
+                                    </li>
+                                    <li>
+                                        Berbelanja pada marketplace yang merupakan mitra YAP!
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="ad-block"><a href="#" class="ad-title iq-tw-6 iq-font-grey"> <span class="ad-icon"><i
+                                            class="ion-ios-checkmark-outline" aria-hidden="true"></i></span>Cara Kerja</a>
+                            <div class="ad-details">
+                                <ul style="list-style-type: decimal">
+                                    <li>
+                                        Daftar di Aplikasi YAP!
+                                    </li>
+                                    <li>
+                                        Lakukan verifikasi
+                                    </li>
+                                    <li>
+                                        Setelah akun Anda diverifikasi Anda bisa menggunakan semua Fitur YAP!.
+                                    </li>
+                                    <li>
+                                        Dengan YAP Anda bisa menerima uang, penarikan uang ke Bank, maupun berbelanja di merchant YAP!mu
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

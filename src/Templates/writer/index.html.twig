@@ -1,0 +1,51 @@
+{% extends 'layouts/layout.html.twig' %}
+
+{% block title %}Beranda Penulis{% endblock %}
+
+{% block content %}
+    <section id="support" class="overview-block-ptb banner iq-bg iq-bg-fixed iq-box-shadow"
+             style=" background: url({{ app.request.basepath }}/public/assets/img/header_blue.png);">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="heading-title">
+                        <h2 class="title iq-tw-6">Beranda Writer.</h2>
+                        <div class="divider"></div>
+                        <p>Disini kamu dapat melihat semua promo dan blog yang sudah terposting di halaman utama <br><small>( Catatan: Jangan dibuka saat menggunakan device dengan layar minimum untuk pengalaman menulis yang lebih nyaman. )</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="overview-block-ptb">
+        <div class="heading-title">
+            <h2 class="title iq-tw-6">Promo</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="container">
+            <table class="table table-responsive">
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Judul</th>
+                        <th>Tanggal Posting</th>
+                        <th>Author</th>
+                        <th>Opsi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th>1</th>
+                    <th>Lorem Ipsum</th>
+                    <th>21 Desember 2010</th>
+                    <th class="author">admin</th>
+                    <th></th>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'layouts/layout.html.twig' %}
+
+{% block title %}Masuk{% endblock %}
+
+{% block content %}
+    <section id="contact-us" class="iq-our-touch iq-bg-fixed form-wrapper" style=" background: url({{ app.request.basepath }}/public/assets/img/header_blue.png);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="iq-get-in iq-pall-40 white-bg">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="heading-title iq-mb-60">
+                                    <h2 class="title iq-tw-6">Silahkan Masuk</h2>
+                                    <div class="divider"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div id="formmessage">Success/Error Message Goes Here</div>
+                            <form class="form-horizontal" id="contactform" method="post" action="{{ path('admin_login') }}">
+                                <div class="row contact-form login-form">
+                                    <div class="col-md-6 col-xs-12 col-md-offset-3">
+                                        <div class="form-group section-field">
+                                            <input type="text" class="form-control" name="_username" id="_username" placeholder="Nama Pengguna">
+                                        </div>
+                                        <div class="form-group section-field">
+                                            <input type="password" class="form-control" name="_password" id="_password" placeholder="Kata Sandi">
+                                        </div>
+                                        <p><a href="#">Daftar menjadi penulis</a></p>
+                                        <div class="form-group"><input type="submit" value="Masuk" class="button btn-block"></div>
+                                    </div>
+                                </div>
+                            </form>
+                            <div id="ajaxloader" style="display:none"><img class="center-block mt-30 mb-30" src="images/ajax-loader.gif" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

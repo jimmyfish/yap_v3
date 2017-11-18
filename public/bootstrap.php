@@ -24,11 +24,6 @@ $app->register(new \Silex\Provider\SwiftmailerServiceProvider());
 $app->register(new \Silex\Provider\TwigServiceProvider(), $config['twig']);
 
 /**
- * Register Monolog Service Provider
- */
-$app->register(new \Silex\Provider\MonologServiceProvider());
-
-/**
  * Register Form Service Provider
  */
 $app->register(new \Silex\Provider\FormServiceProvider());
@@ -66,7 +61,7 @@ $app->register(new \Silex\Provider\ValidatorServiceProvider());
 /**
  * Register Web Profiler Service Provider
  */
-if ($app['debug']) {
-    Symfony\Component\Debug\Debug::enable(E_ALL, true);
-    $app->register(new \Silex\Provider\WebProfilerServiceProvider(), $config['profiler']);
-}
+//if ($app['debug']) {
+//    Symfony\Component\Debug\Debug::enable(E_ALL, true);
+//    $app->register(new \Silex\Provider\WebProfilerServiceProvider(), $config['profiler']);
+//}
