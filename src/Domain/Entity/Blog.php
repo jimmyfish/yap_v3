@@ -42,7 +42,7 @@ class Blog
      * @var string
      * @Column(type="text", nullable=false, length=65535)
      */
-    private $contents;
+    private $content;
 
     /**
      * @var int
@@ -55,7 +55,7 @@ class Blog
      * @var int
      * @Column(type="integer", nullable=false, name="is_deleted")
      */
-    private $isDeleted;
+    private $isDeleted = 0;
 
     /**
      * @return int
@@ -97,9 +97,6 @@ class Blog
         return $this->date;
     }
 
-    /**
-     * @param \DateTime $date
-     */
     public function setDate($date)
     {
         $this->date = $date;
@@ -108,17 +105,17 @@ class Blog
     /**
      * @return string
      */
-    public function getContents()
+    public function getContent()
     {
-        return $this->contents;
+        return $this->content;
     }
 
     /**
-     * @param string $contents
+     * @param string $content
      */
-    public function setContents($contents)
+    public function setContent($content)
     {
-        $this->contents = $contents;
+        $this->content = $content;
     }
 
     /**
@@ -152,4 +149,27 @@ class Blog
     {
         $this->isDeleted = $isDeleted;
     }
+
+    /**
+     * @var int
+     * @Column(name="image", type="string", length=255, nullable=false)
+     */
+    private $image;
+
+    /**
+     * @return int
+     */
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+    /**
+     * @param int $image
+     */
+    public function setImage($image)
+    {
+        $this->image = $image;
+    }
+
 }

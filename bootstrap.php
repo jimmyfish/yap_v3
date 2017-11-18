@@ -69,3 +69,11 @@ $app->register(new \Silex\Provider\ValidatorServiceProvider());
 $app['user.repository'] = function () use ($app) {
     return $app['orm.em']->getRepository(\Jimmy\Yap\Domain\Entity\User::class);
 };
+
+$app['blog.repository'] = function () use ($app) {
+    return $app['orm.em']->getRepository(\Jimmy\Yap\Domain\Entity\Blog::class);
+};
+
+$app['promo.repository'] = function () use ($app) {
+    return $app['orm.em']->getRepository(\Jimmy\Yap\Domain\Entity\Promo::class);
+};

@@ -1,0 +1,90 @@
+{% extends 'layouts/layout.html.twig' %}
+
+{% block title %}{{ title }} Promo{% endblock %}
+
+{% block content %}
+
+    <section id="contact-us" class="iq-our-touch iq-bg-fixed form-wrapper" style=" background: url({{ app.request.basepath }}/public/assets/img/header_blue.png);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="iq-get-in iq-pall-40 white-bg">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="heading-title iq-mb-60">
+                                    <h2 class="title iq-tw-6">{{ title }} Promo</h2>
+                                    <div class="divider"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div id="formmessage">Success/Error Message Goes Here</div>
+                            <form class="form-horizontal" id="contactform" method="post" action="" enctype="multipart/form-data">
+                                <div class="row contact-form login-form">
+                                    <div class="col-md-10 col-xs-12 col-md-offset-1">
+                                        <div class="form-group">
+                                            <label for="_title">Judul Promo : </label>
+                                            <input type="text" class="form-control" name="_title" id="_title" placeholder="Judul Promo" {% if (data is defined) and (data.title is not null) %}value="{{ data.title }}"{% endif %} required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="_kode-promo">Kode Promo :</label>
+                                            <input type="text" required name="_kode-promo" id="_kode-promo" class="form-control" {% if (data is defined) and (data.kodePromo is not null) %}value="{{ data.kodePromo }}"{% endif %}>
+                                        </div>
+                                        <div class="form-group">
+                                            <p class="text-left"><label for="_content">Content :</label></p>
+                                            <textarea name="_content" id="_content"> {% if (data is defined) and (data.content is not null) %}{{ data.content|raw }}{% endif %}</textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="_img">Gambar</label>
+                                            {% if (data is defined) and (data.image is not null) %}
+                                                <img class="img-responsive iq-mb-20" src="{{ app.request.basepath }}/public/photo/promo/{{ data.image }}"
+                                                     alt="">
+                                            {% endif %}
+                                            <input type="file" name="_img" id="_img" {% if (data is not defined) and (data.image is null) %}required{% endif %}>
+                                        </div>
+                                        <div class="form-group">
+                                            <p><label for="_start-date">Masa Berlaku :</label></p>
+                                            <input type="text" name="_start-date" id="_start-date" class="datetime" {% if (data is defined) and (data.tanggalBerlakuAwal is not null) %}value="{{ data.tanggalBerlakuAwal|date('d/m/y') }}"{% endif %} required>
+                                            &nbsp;<span><i class="fa fa-angle-right"></i></span>&nbsp;
+                                            <input type="text" name="_end-date" id="_end-date" class="datetime" {% if (data is defined) and (data.tanggalBerlakuAkhir is not null) %}value="{{ data.tanggalBerlakuAkhir|date('d/m/y') }}"{% endif %} required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="_author">Author :</label>
+                                            <input type="text" name="_author" id="_author" readonly value="{{ app.session.get('uname')['value'] }}" class="form-control text-capitalize">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="submit" value="{{ title }} Promo" class="button btn-block">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <div id="ajaxloader" style="display:none"><img class="center-block mt-30 mb-30" src="images/ajax-loader.gif" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block customJS %}
+    <script>
+        $(function() {
+            tinymce.init({
+                selector: '#_content'
+            });
+
+            $('.datetime').datetimepicker({
+                format: 'DD/MM/YYYY',
+                pickTime: false,
+                icons: {
+                    time: 'fa fa-clock-o',
+                    up: 'fa fa-chevron-up',
+                    down: 'fa fa-chevron-down',
+                    date: 'fa fa-calendar'
+                },
+                entity_encoding: "raw"
+            });
+        });
+    </script>
+{% endblock %}

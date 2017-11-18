@@ -20,32 +20,104 @@
 
     </section>
 
-    <section class="overview-block-ptb">
+    <section id="promo-write" class="overview-block-ptb iq-pb-10">
         <div class="heading-title">
             <h2 class="title iq-tw-6">Promo</h2>
             <div class="divider"></div>
         </div>
         <div class="container">
-            <table class="table table-responsive">
+            <a href="{{ path('admin_promo_create') }}" class="btn btn-custom">Buat Baru</a>
+            <table class="table table-responsive table-hover" id="table-promo">
                 <thead>
                     <tr>
                         <th>No.</th>
                         <th>Judul</th>
-                        <th>Tanggal Posting</th>
+                        <th>Tanggal Awal</th>
+                        <th>Tanggal Akhir</th>
                         <th>Author</th>
                         <th>Opsi</th>
                     </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <th>1</th>
-                    <th>Lorem Ipsum</th>
-                    <th>21 Desember 2010</th>
-                    <th class="author">admin</th>
-                    <th></th>
-                </tr>
+                {% set iBlog = 1 %}
+                {% if data['promo']|length > 0 %}
+                    {% for item in data['promo'] %}
+                        <tr>
+                            <td>{{ iBlog }}</td>
+                            <td>{{ item.title }}</td>
+                            <td>{{ item.tanggalBerlakuAwal|date('d M y') }}</td>
+                            <td>{{ item.tanggalBerlakuAkhir|date('d M y') }}</td>
+                            <td>{{ item.author.firstName }}</td>
+                            <td>
+                                <a href="{{ path('admin_promo_edit', {id: item.id}) }}" class="text-primary"><i class="fa fa-pencil"></i></a>
+                                <a class="text-danger" href="{{ path('admin_promo_delete_temp', {id: item.id}) }}"><i class="fa fa-trash"></i></a>
+                            </td>
+                        </tr>
+                        {% set iBlog = iBlog + 1 %}
+                    {% endfor %}
+                {% endif %}
                 </tbody>
             </table>
         </div>
     </section>
+
+    <section id="blog-write" class="overview-block-ptb">
+        <div class="heading-title">
+            <h2 class="title iq-tw-6">Blog</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="container">
+            <a href="{{ path('admin_blog_create') }}" class="btn btn-custom">Buat Baru</a>
+            <table class="table table-responsive table-hover" id="table-blog">
+                <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Judul</th>
+                    <th>Tanggal Posting</th>
+                    <th>Author</th>
+                    <th>Opsi</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% set iBlog = 1 %}
+                {% if data['promo']|length > 0 %}
+                    {% for item in data['blog'] %}
+                        <tr>
+                            <td>{{ iBlog }}</td>
+                            <td>{{ item.title }}</td>
+                            <td>{{ item.date|date('d M y') }}</td>
+                            <td>{{ item.author.firstName }}</td>
+                            <td>
+                                <a href="{{ path('admin_blog_edit', {id: item.id}) }}" class="text-primary"><i class="fa fa-pencil"></i></a>
+                                <a class="text-danger" href="{{ path('admin_blog_delete_temp', {id: item.id}) }}"><i class="fa fa-trash"></i></a>
+                            </td>
+                        </tr>
+                        {% set iBlog = iBlog + 1 %}
+                    {% endfor %}
+                {% endif %}
+                </tbody>
+            </table>
+        </div>
+    </section>
+{% endblock %}
+
+{% block customJS %}
+    <script>
+        $(function() {
+            $('#table-blog').dataTable({
+                "aoColumns": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    {
+                        "bSortable": false,
+                        "bSearchable": false
+                    }
+                ]
+            });
+
+            $('#table-promo').dataTable();
+        });
+    </script>
 {% endblock %}

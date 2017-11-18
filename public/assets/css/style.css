@@ -3946,9 +3946,38 @@ header.affix .navbar-default {
 
 .form-wrapper p {
   font-size: 14px;
-  text-align: center;
 }
 
 .author {
   text-transform: capitalize;
+}
+
+.btn-custom {
+  background-color: #60BDBA;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  color: #fff;
+  transition: all .4s ease;
+  padding: 6px 30px;
+  margin-bottom: 20px;
+}
+
+.btn-custom:hover {
+  background: #025BA2;
+  transition: all .4s ease;
+  color: #fff;
+}
+
+table.dataTable thead th, table.dataTable thead td {
+  border-bottom: 0;
+}
+
+table.dataTable.no-footer {
+  border-bottom: 0;
+  margin-bottom: 20px;
+}
+
+.mce-notification {
+  display: none;
 }
