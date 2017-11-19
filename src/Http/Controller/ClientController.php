@@ -9,6 +9,7 @@
 namespace Jimmy\Yap\Http\Controller;
 
 
+use Doctrine\Common\Util\Debug;
 use Silex\Application;
 use Silex\ControllerCollection;
 use Silex\ControllerProviderInterface;
@@ -51,7 +52,116 @@ class ClientController implements ControllerProviderInterface
         $controllers->get('/event-detail/{id}', [$this, 'eventDetailAction'])
             ->bind('event_detail');
 
+        $controllers->get('/event', [$this, 'eventListAction'])
+            ->bind('event_list');
+
+        $controllers->get('/blog', [$this, 'blogListAction'])
+            ->bind('blog_list');
+
+        $controllers->get('/blog/{id}', [$this, 'blogDetailAction'])
+            ->bind('blog_detail');
+
+        $controllers->get('/promo', [$this, 'promoListAction'])
+            ->bind('promo_list');
+
+        $controllers->get('/promo/{id}', [$this, 'promoDetailAction'])
+            ->bind('promo_detail');
+
         return $controllers;
+    }
+
+    public function blogDetailAction(Request $request)
+    {
+        $data = $this->app['blog.repository']->findById($request->get('id'));
+
+        return $this->app['twig']->render('client/event_detail.html.twig', [
+            'data' => $data,
+            'event_type' => 1,
+        ]);
+    }
+
+    public function promoDetailAction(Request $request)
+    {
+        $data = $this->app['promo.repository']->findById($request->get('id'));
+
+        return $this->app['twig']->render('client/event_detail.html.twig', [
+            'data' => $data,
+            'event_type' => 0,
+        ]);
+    }
+
+    public function promoListAction(Request $request, $pageStart = 1)
+    {
+        $manager = $this->app['orm.em'];
+
+        if ($request->get('page') != null) {
+            $pageStart = $request->get('page');
+        }
+
+        $pageInfo['countAll'] = count($this->app['promo.repository']->findAll());
+
+        $query = $manager->getRepository('Jimmy\Yap\Domain\Entity\Promo')
+            ->createQueryBuilder('p')
+            ->where('p.isDeleted = :isDeleted')->setParameter('isDeleted', 0)
+            ->orderBy('p.id', 'DESC')
+            ->getQuery()
+            ->setMaxResults(10)
+            ->setFirstResult(($pageStart - 1) * 10);
+
+        return $this->app['twig']->render('client/event-type.html.twig', [
+            'data' => $query->getResult(),
+            'title' => 'Promo',
+            'event_type' => 0,
+            'pageInfo' => $pageInfo,
+        ]);
+    }
+
+    public function blogListAction(Request $request, $pageStart = 1)
+    {
+        $manager = $this->app['orm.em'];
+
+        if ($request->get('page') != null) {
+            $pageStart = $request->get('page');
+        }
+
+        $pageInfo['countAll'] = count($this->app['blog.repository']->findAll());
+
+        $query = $manager->getRepository('Jimmy\Yap\Domain\Entity\Blog')
+            ->createQueryBuilder('b')
+            ->where('b.isDeleted = :isDeleted')->setParameter('isDeleted', 0)
+            ->orderBy('b.id', 'DESC')
+            ->getQuery()
+            ->setMaxResults(10)
+            ->setFirstResult(($pageStart - 1) * 10);
+
+        return $this->app['twig']->render('client/event-type.html.twig', [
+            'data' => $query->getResult(),
+            'title' => 'Blog',
+            'event_type' => 1,
+            'pageInfo' => $pageInfo,
+        ]);
+    }
+
+    public function eventListAction()
+    {
+        $manager = $this->app['orm.em'];
+        $data['promo'] =
+            $manager->getRepository('Jimmy\Yap\Domain\Entity\Promo')
+                ->createQueryBuilder('p')
+                ->where('p.isDeleted = :isDeleted')->setParameter('isDeleted', 0)
+                ->orderBy('p.id', 'DESC')
+                ->getQuery()
+                ->setMaxResults(3)->getResult();
+
+        $data['blog'] =
+            $manager->getRepository('Jimmy\Yap\Domain\Entity\Blog')
+                ->createQueryBuilder('b')
+                ->where('b.isDeleted = :isDeleted')->setParameter('isDeleted', 0)
+                ->orderBy('b.id', 'DESC')
+                ->getQuery()
+                ->setMaxResults(3)->getResult();
+
+        return $this->app['twig']->render('client/event.html.twig', ['data' => $data]);
     }
 
     public function eventDetailAction()
@@ -76,7 +186,16 @@ class ClientController implements ControllerProviderInterface
 
     public function homeAction(Request $request)
     {
-        return $this->app['twig']->render('home/index.html.twig');
+        $manager = $this->app['orm.em'];
+
+        $query = $manager->getRepository('Jimmy\Yap\Domain\Entity\Promo')
+            ->createQueryBuilder('p')
+            ->where('p.isDeleted = :isDeleted')->setParameter('isDeleted', 0)
+            ->orderBy('p.id', 'DESC')
+            ->getQuery()
+            ->setMaxResults(3);
+
+        return $this->app['twig']->render('home/index.html.twig', ['data' => $query->getResult()]);
     }
 
     public function contactAction(Request $request)

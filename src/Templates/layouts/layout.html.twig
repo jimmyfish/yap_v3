@@ -78,10 +78,6 @@
                         </button>
                         <a class="navbar-brand" href="{{ path('home') }}">
                             <span><img src="{{ app.request.basepath }}/public/assets/img/Logo_YAP.png" alt="logo"></span>
-                            <!-- &nbsp;
-                            &nbsp;
-                            &nbsp;
-                            <span><img src="{{ app.request.basepath }}/public/assets/img/Logo_BNI.png" alt="logo"></span> -->
                         </a>
                     </div>
                     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -93,7 +89,7 @@
 
                             <li {% if uriPath == path('support') %}class="active"{% endif %}><a href="{{ path('support') }}">Layanan</a></li>
 
-                            <li {% if uriPath == path('blog_index') %}class="active"{% endif %}><a href="{{ path('blog_index') }}">Promo &amp; Blog</a></li>
+                            <li {% if uriPath == path('event_list') %}class="active"{% endif %}><a href="{{ path('event_list') }}">Promo &amp; Blog</a></li>
 
                             <li {% if uriPath == path('contact') %}class="active"{% endif %}><a href="{{ path('contact') }}">FAQ</a></li>
 

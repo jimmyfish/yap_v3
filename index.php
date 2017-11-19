@@ -17,7 +17,6 @@ $app = new \Silex\Application($config['common']);
 require 'bootstrap.php';
 
 $app->mount('/', new \Jimmy\Yap\Http\Controller\ClientController($app));
-$app->mount('/blog', new \Jimmy\Yap\Http\Controller\BlogController($app));
 $app->mount('/penulis', new \Jimmy\Yap\Http\Controller\UserController($app));
 
 $app->run();

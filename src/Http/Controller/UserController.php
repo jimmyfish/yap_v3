@@ -266,7 +266,7 @@ class UserController implements ControllerProviderInterface
     public function logoutAction()
     {
         $this->app['session']->clear();
-        return 'OK';
+        return $this->app->redirect($this->app['url_generator']->generate('admin_index'));
     }
 
     public function credentialChecks()
@@ -302,10 +302,14 @@ class UserController implements ControllerProviderInterface
             if (!$request->get('_username') == null) {
                 $data = $this->app['user.repository']->findByUsername($request->get('_username'));
 
-                if ($data->getPassword() == sha1(md5($request->get('_password')))) {
+                if ($data != null) {
+                    if ($data->getPassword() == sha1(md5($request->get('_password')))) {
 
-                    $session->set('uname', ['value' => $data->getUsername()]);
-                    $session->set('role', ['value' => $data->getRole()]);
+                        $session->set('uname', ['value' => $data->getUsername()]);
+                        $session->set('role', ['value' => $data->getRole()]);
+                    }
+                } else {
+                    return $this->app->redirect($this->app['url_generator']->generate('admin_login'));
                 }
 
                 return $this->app->redirect($this->app['url_generator']->generate('admin_index'));

@@ -1,0 +1,72 @@
+{% extends 'layouts/layout.html.twig' %}
+
+{% block title %}{{ data.title }}{% endblock %}
+
+{% block content %}
+
+    <section id="support" class="overview-block-ptb banner iq-bg iq-bg-fixed"
+             style=" background: url({{ app.request.basepath }}/public/assets/img/header_blue.png);">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="heading-title">
+                            <h2 class="title iq-tw-6">{{ data.title }}</h2>
+                            <div class="divider"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="blog" class="iq-page-blog overview-block-ptb">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="iq-blog-box">
+                        <div class="iq-blog-image clearfix">
+                            {% if event_type == 0 %}
+                                <img class="img-responsive center-block"
+                                     src="{{ app.request.basepath }}/public/photo/promo/{{ data.image }}" alt="#">
+                            {% else %}
+                                <img class="img-responsive center-block"
+                                     src="{{ app.request.basepath }}/public/photo/blog/{{ data.image }}" alt="#">
+                            {% endif %}
+                        </div>
+                        <div class="iq-blog-detail">
+                            <div class="container">
+                                <div class="iq-blog-meta">
+                                    <ul class="list-inline">
+                                        <li>
+                                            {% if event_type == 0 %}
+                                                <i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;
+                                                <strong>{{ data.tanggalBerlakuAwal|date('d M y') }}</strong>
+                                                &nbsp; Sampai dengan &nbsp;<i class="fa fa-calendar"
+                                                                              aria-hidden="true"></i>&nbsp;
+                                                <strong>{{ data.tanggalBerlakuAkhir|date('d M y') }}</strong>
+                                            {% else %}
+                                                <i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;
+                                                {{ data.date|date('d M y') }}
+                                            {% endif %}
+                                        </li>
+                                    </ul>
+                                </div>
+                                <blockquote class="iq-mtb-40">
+                                    {% if event_type == 0 %}
+                                        <p>Kode Promo : <strong>{{ data.kodePromo }}</strong></p>
+                                    {% endif %}
+                                    <footer>diposting oleh
+                                        <cite title="Source Title">{{ data.author.firstName }}.</cite>
+                                    </footer>
+                                </blockquote>
+                                <div class="blog-content">
+                                    {{ data.content|raw }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
