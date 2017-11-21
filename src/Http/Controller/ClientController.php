@@ -67,7 +67,15 @@ class ClientController implements ControllerProviderInterface
         $controllers->get('/promo/{id}', [$this, 'promoDetailAction'])
             ->bind('promo_detail');
 
+        $controllers->get('/daftar-merchant', [$this, 'merchantRegAction'])
+            ->bind('register_merchant');
+
         return $controllers;
+    }
+
+    public function merchantRegAction()
+    {
+      return $this->app['twig']->render('client/form.merchant.html.twig');
     }
 
     public function blogDetailAction(Request $request)
@@ -213,7 +221,7 @@ class ClientController implements ControllerProviderInterface
             $message = \Swift_Message::newInstance();
             $message->setSubject('Website Feedback');
             $message->setFrom([$content['email'] => 'YAP! Website']);
-            $message->setTo(['info@yap.id']);
+            $message->setTo(['yap.bni46@gmail.com']);
             $message->setBody(
                 $this->app['twig']->render(
                     'client/transport.html.twig',

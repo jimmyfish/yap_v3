@@ -91,7 +91,7 @@ NOTE: This file contains the styling for responsive Template.
 	header .navbar-default .navbar-nav > li > a { font-size: 14px; color: #333; padding: 12px 20px; }
 	header .navbar-default .navbar-nav > li > a:hover, header .navbar-default .navbar-nav > li > a:focus, header .navbar-default .navbar-nav > li.active > a, header .navbar-default .navbar-nav > li.active > a:focus, header .navbar-default .navbar-nav > li.active > a:hover { color: #fff; background: rgba(30, 80, 226, 1); background: -moz-linear-gradient(left, rgba(30, 80, 226, 1) 0%, rgba(9, 179, 239, 1) 100%); background: -webkit-gradient(left top, right top, color-stop(0%, rgba(30, 80, 226, 1)), color-stop(100%, rgba(9, 179, 239, 1))); background: -webkit-linear-gradient(left, rgba(30, 80, 226, 1) 0%, rgba(9, 179, 239, 1) 100%); background: -o-linear-gradient(left, rgba(30, 80, 226, 1) 0%, rgba(9, 179, 239, 1) 100%); background: -ms-linear-gradient(left, rgba(30, 80, 226, 1) 0%, rgba(9, 179, 239, 1) 100%); background: linear-gradient(to right, rgba(30, 80, 226, 1) 0%, rgba(9, 179, 239, 1) 100%); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1e50e2', endColorstr='#09b3ef', GradientType=1); }
 	header.affix .navbar-default .navbar-toggle { margin: 8px 0 0 0; }
-	.overview-block-ptb { padding: 70px 0; }
+	.overview-block-ptb { padding: 100px 0 70px 0; }
 	.overview-block-pt { padding: 70px 0 0; }
 	.overview-block-pb { padding: 0 0 70px; }
 	.banner-text h1 { margin-top: 0; margin-bottom: 0; }

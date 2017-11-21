@@ -40,7 +40,7 @@
                                                 <img class="img-responsive iq-mb-20" src="{{ app.request.basepath }}/public/photo/promo/{{ data.image }}"
                                                      alt="">
                                             {% endif %}
-                                            <input type="file" name="_img" id="_img" {% if (data is not defined) and (data.image is null) %}required{% endif %}>
+                                            <input type="file" name="_img" id="_img" {% if (data is not defined) %}required{% endif %}>
                                         </div>
                                         <div class="form-group">
                                             <p><label for="_start-date">Masa Berlaku :</label></p>

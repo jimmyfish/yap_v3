@@ -93,9 +93,9 @@
 
                             <li {% if uriPath == path('contact') %}class="active"{% endif %}><a href="{{ path('contact') }}">FAQ</a></li>
 
-                            <li class="hidden-lg"><a href="#crystal">Bergabung Menjadi Merchant</a></li>
+                            <li class="hidden-lg"><a href="{{ path('register_merchant') }}">Bergabung Menjadi Merchant</a></li>
                             <span class="hidden-sm hidden-xs hidden-md">
-                                <a href="#bergabung" class="btn btn-merchant">Bergabung Menjadi Merchant</a>
+                                <a href="{{ path('register_merchant') }}" class="btn btn-merchant">Bergabung Menjadi Merchant</a>
                                 <a href="http://www.bni.co.id/id-id/" class="hidden-xs" target="_blank">
                                     <img src="{{ app.request.basepath }}/public/assets/img/logo_bni.png" alt="">
                                 </a>
