@@ -3,46 +3,15 @@
 {% block title %}Hubungi kami{% endblock %}
 
 {% block content %}
-    <section id="contact-us" class="iq-our-touch iq-bg-fixed" style=" background: url({{ app.request.basepath }}/public/assets/img/header_blue.png);">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-10 col-md-offset-1">
-                    <div class="iq-get-in iq-pall-40 white-bg">
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div class="heading-title iq-mb-60">
-                                    <h2 class="title iq-tw-6">Hubungi kami</h2>
-                                    <div class="divider"></div>
-                                    <p>Bila anda mempunyai pertanyaan, keluhan atau kritik dan saran untuk perkembangan Aplikasi pembayaran YAP!, silahkan isi form berikut ini secara lengkap.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div id="formmessage">Success/Error Message Goes Here</div>
-                            <form class="form-horizontal" id="contactform" method="post" action="">
-                                <div class="contact-form">
-                                    <div class="col-sm-6">
-                                        <div class="section-field">
-                                            <input id="name" type="text" placeholder="Nama*" name="name" required>
-                                        </div>
-                                        <div class="section-field">
-                                            <input type="email" placeholder="Email*" name="email" required>
-                                        </div>
-                                        <div class="section-field">
-                                            <input type="text" placeholder="Nomor Selular*" name="phone" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="section-field textarea">
-                                            <textarea class="input-message" placeholder="Pesan*" rows="7" name="message" required></textarea>
-                                        </div>
-                                        <input type="hidden" name="action" value="sendEmail"/>
-                                        <button id="submit" name="submit" type="submit" value="Send" class="button pull-right iq-mt-40">Kirim pesan
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
-                            <div id="ajaxloader" style="display:none"><img class="center-block mt-30 mb-30" src="images/ajax-loader.gif" alt=""></div>
+    <section id="support" class="overview-block-ptb banner iq-bg iq-bg-fixed iq-box-shadow" style=" background: url({{ app.request.basepath }}/public/assets/img/header_blue.png);">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="heading-title">
+                            <h2 class="title iq-tw-6">Pertanyaan yang sering diajukan</h2>
+                            <div class="divider"></div>
+                            <!-- <p>YAP! adalah aplikasi yang menjadikan pembayaran menjadi lebih mudah. Banyak manfaat yang bisa anda dapatkan ketika mnejadikan YAP! bagian dari hidup anda.</p> -->
                         </div>
                     </div>
                 </div>
@@ -51,15 +20,6 @@
     </section>
     <section class="overview-block-ptb">
         <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="heading-title iq-mb-60">
-                        <h2 class="title iq-tw-6">Pertanyaan yang sering diajukan</h2>
-                        <div class="divider"></div>
-                        <!-- <p>Bila anda mempunyai pertanyaan, keluhan atau kritik dan saran untuk perkembangan Aplikasi pembayaran YAP!, silahkan isi form berikut ini secara lengkap.</p> -->
-                    </div>
-                </div>
-            </div>
             <div class="row">
                 <div class="col-sm-12 col-md-3">&nbsp;</div>
                 <div class="col-sm-12 col-md-6">
@@ -150,4 +110,51 @@
             </div>
         </div>
     </section>
+    <section id="contact-us" class="iq-our-touch iq-bg-fixed" style=" background: url({{ app.request.basepath }}/public/assets/img/header_blue.png);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="iq-get-in iq-pall-40 white-bg">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="heading-title iq-mb-60">
+                                    <h2 class="title iq-tw-6">Hubungi kami</h2>
+                                    <div class="divider"></div>
+                                    <p>Bila anda mempunyai pertanyaan, keluhan atau kritik dan saran untuk perkembangan Aplikasi pembayaran YAP!, silahkan isi form berikut ini secara lengkap.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div id="formmessage">Success/Error Message Goes Here</div>
+                            <form class="form-horizontal" id="contactform" method="post" action="">
+                                <div class="contact-form">
+                                    <div class="col-sm-6">
+                                        <div class="section-field">
+                                            <input id="name" type="text" placeholder="Nama*" name="name" required>
+                                        </div>
+                                        <div class="section-field">
+                                            <input type="email" placeholder="Email*" name="email" required>
+                                        </div>
+                                        <div class="section-field">
+                                            <input type="text" placeholder="Nomor Selular*" name="phone" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="section-field textarea">
+                                            <textarea class="input-message" placeholder="Pesan*" rows="7" name="message" required></textarea>
+                                        </div>
+                                        <input type="hidden" name="action" value="sendEmail"/>
+                                        <button id="submit" name="submit" type="submit" value="Send" class="button pull-right iq-mt-40">Kirim pesan
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                            <div id="ajaxloader" style="display:none"><img class="center-block mt-30 mb-30" src="images/ajax-loader.gif" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
 {% endblock %}

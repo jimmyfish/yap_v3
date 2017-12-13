@@ -184,7 +184,7 @@ class ClientController implements ControllerProviderInterface
 
     public function aboutAction()
     {
-        return $this->app['twig']->render('client/about.html.twig');
+        return $this->app['twig']->render('client/tentang.html.twig');
     }
 
     public function uConstructAction()
