@@ -3907,39 +3907,39 @@ header.affix .navbar-default {
   margin-bottom: 0;
 }
 
-#main-carousel {
+.carousel {
   padding: 50px 200px 50px 50px;
 }
 
 @media (max-width: 992px) {
-  #main-carousel {
+  .carousel {
     padding-right: 0;
   }
-  #main-carousel .inner-text {
+  .carousel .inner-text {
     margin-top: 0 !important;
   }
 }
 
-#main-carousel .banner-text {
+.carousel .banner-text {
   margin: 0;
 }
 
-#main-carousel .item {
+.carousel .item {
   margin-top: 0;
   padding-left: 100px;
   padding-right: 100px;
 }
 
-#main-carousel .banner-text img {
+.carousel .banner-text img {
   max-height: 500px;
 }
 
-#main-carousel .inner-text {
+.carousel .inner-text {
   margin-top: 50px;
 }
 
 @media screen and (min-width: 1025px) {
-  #main-carousel .inner-text {
+  .carousel .inner-text {
     margin-top: 100px;
   }
 }

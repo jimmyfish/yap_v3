@@ -8,3 +8,48 @@ Design and Developed by: iqonicthemes.in
 NOTE: You can use your styling layout by this file to your website.
 
 */
+
+.large-only {
+  display: block;
+}
+
+.small-only {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .large-only {
+    display: none;
+  }
+  .small-only {
+    display: block;
+  }
+}
+
+.tutorial img {
+  margin-bottom: 20px;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tutorial a img {
+  height: 40px;
+  margin: 20px 0;
+}
+
+.tutorial h4 {
+  margin-bottom: 10px;
+}
+
+.tutorial p {
+  font-size: 16px;
+}
+
+.slick-slide {
+  outline: none !important;
+}
+
+.owl-controls {
+  display: none;
+}
