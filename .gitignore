@@ -7,3 +7,4 @@ app/proxies/
 node_modules/
 public/photo/promo/
 public/photo/blog/
+.DS_Store
