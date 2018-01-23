@@ -63,10 +63,12 @@
                                     <li {% if uriPath == path('about') %}class="active"{% endif %}><a href="{{ path('about') }}">Tentang Kami</a></li>
                                     <li {% if uriPath == path('support') %}class="active"{% endif %}><a href="{{ path('support') }}">Layanan</a></li>
                                     <li {% if uriPath == path('event_list') %}class="active"{% endif %}><a href="{{ path('event_list') }}">Promo &amp; Blog</a></li>
-                                    <li {% if uriPath == path('contact') %}class="active"{% endif %}><a href="{{ path('contact') }}">FAQ</a></li>
+                                    <!--li {% if uriPath == path('contact') %}class="active"{% endif %}><a href="{{ path('contact') }}">FAQ</a></li-->
                                     <li class="hidden-lg"><a href="{{ path('register_merchant') }}">Bergabung Menjadi Merchant</a></li>
                                     <span class="hidden-sm hidden-xs hidden-md">
                                         <a href="{{ path('register_merchant') }}" class="btn btn-merchant">Bergabung Menjadi Merchant</a>
+
+
                                         <a href="http://www.bni.co.id/id-id/" class="hidden-xs" target="_blank">
                                             <img src="{{ app.request.basepath }}/public/assets/img/logo_bni.png" alt="">
                                         </a>
@@ -90,6 +92,7 @@
                                 <a href="{{ path('home')}}"><img src="{{ app.request.basepath }}/public/assets/img/logo_yap2.png" alt="" class="img-responsive"></a>
                             </div>
                         </div>
+
                         <div class="col-sm-12 col-md-3 col-lg-3 iq-mt-15">
                             <a href="https://eform.bni.co.id/BNI_eForm/kartuKredit" target="_blank">
                                 <div class="iq-fancy-box-04">
@@ -116,16 +119,38 @@
                                 </div>
                             </a>
                         </div>
+
                         <div class="col-sm-12 col-md-1 col-lg-1">&nbsp;</div>
                         <div class="col-sm-12 col-md-3 col-lg-3">
+
+                            </br>
+                            <div class="iq-fancy-box-05">
+
+                                    <a class="iq-mr-15" href="https://play.google.com/store/apps/details?id=id.co.bni.yapcustomer"><img src="{{ app.request.basepath }}/public/assets/img/Playstore_Badge.png" alt="Playstore" ></a>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                      <div class="row iq-footer-03 white-bg iq-pt-20 iq-pb-50">
+                        <div class="col-sm-12">
                             <ul class="info-share">
                                 <li><a href="http://twitter.com/bni" target="_blank"><i class="fa fa-twitter"></i></a></li>
                                 <li><a href="http://facebook.com/bni" target="_blank"><i class="fa fa-facebook"></i></a></li>
                                 <li><a href="http://instagram.com/bni46" target="_blank"><i class="fa fa-instagram"></i></a></li>
                                 <li><a href="http://www.youtube.com/BNITVC" target="_blank"><i class="fa fa-youtube"></i></a></li>
+
+                                <li><a href="#" target="_blank"><i class="fa fa-phone"></i></a></li>
+                                <a> BNI Call <strong> 1500046 </strong></a>
+
+
                             </ul>
+
                         </div>
                     </div>
+
                     <div class="row iq-footer-03 white-bg iq-pt-20 iq-pb-50">
                         <div class="col-sm-12">
                             <div class="footer-copyright iq-pt-30">&copy; Hak Cipta <span id="copyright"> <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script></span> PT. Bank Negara Indonesia (Persero), Tbk. <span class="pull-right">BNI Terdaftar dan diawasi oleh Otoritas Jasa Keuangan.</span> </div>
@@ -163,18 +188,17 @@
         <!-- Style Customizer -->
         {#<script type="text/javascript" src="{{ app.request.basepath }}/public/assets/js/style-customizer.js"></script>#}
         <!--Start of Tawk.to Script-->
-        <script type="text/javascript">
-        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-        (function(){
-        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-        s1.async=true;
-        s1.src='https://embed.tawk.to/59fb1d9dbb0c3f433d4c69e0/default';
-        s1.charset='UTF-8';
-        s1.setAttribute('crossorigin','*');
-        s0.parentNode.insertBefore(s1,s0);
-        })();
-        </script>
-        {% block customJS %}{% endblock %}
-        <!--End of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5a6380a24b401e45400c408b/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
     </body>
 </html>
