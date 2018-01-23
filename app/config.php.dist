@@ -38,7 +38,7 @@ return [
             'mappings' => [
                 [
                     'type' => 'annotation',
-                    'namespace' => 'Jimmy\Silex\Domain\Entity',
+                    'namespace' => 'Jimmy\Yap\Domain\Entity',
                     'path' => __DIR__ . '/../src/Domain/Entity',
                 ]
             ],
