@@ -461,9 +461,10 @@ blockquote {
 Section padding
 ----------------*/
 
-.overview-block-ptb {
-  padding: 100px 0;
+/*.overview-block-ptb {
+  padding: 0px 0;
 }
+--*/
 
 .overview-block-pt {
   padding: 100px 0 0;
@@ -3908,12 +3909,13 @@ header.affix .navbar-default {
 }
 
 .carousel {
-  padding: 50px 200px 50px 50px;
+  padding: 100px 20px 100px 20px;
 }
 
 @media (max-width: 992px) {
   .carousel {
     padding-right: 0;
+    padding-bottom: 150px;
   }
   .carousel .inner-text {
     margin-top: 0 !important;
@@ -3925,9 +3927,9 @@ header.affix .navbar-default {
 }
 
 .carousel .item {
-  margin-top: 0;
-  padding-left: 100px;
-  padding-right: 100px;
+  margin-top: 75px;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .carousel .banner-text img {

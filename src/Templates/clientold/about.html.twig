@@ -1,0 +1,426 @@
+{% extends 'layouts/layout.html.twig' %}
+
+{% block title %}Tentang Kami{% endblock %}
+
+{% block content %}
+    <!-- Frequently Asked Questions -->
+
+    <section id="support" class="overview-block-ptb banner iq-bg iq-bg-fixed iq-box-shadow" style=" background: url({{ app.request.basepath }}/public/assets/img/header_blue.png);">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="heading-title">
+                            <h2 class="title iq-tw-6">Tentang Kami</h2>
+                            <div class="divider"></div>
+                            <!-- <p>YAP! adalah aplikasi yang menjadikan pembayaran menjadi lebih mudah. Banyak manfaat yang bisa anda dapatkan ketika mnejadikan YAP! bagian dari hidup anda.</p> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="iq-about grey-bg iq-mtb-40">
+        <div class="container">
+            <div class="row row-eq-height">
+                <div class="col-sm-12 col-lg-5 col-md-5 iq-about-bg">
+                    <div class="iq-bg about-img popup-gallery play-video">
+                        <img class="img-responsive center-block" src="{{ app.request.basepath }}/public/assets/img/scr3.png" alt="#">
+                        <a href="{{ app.request.basepath }}/public/assets/video/main.mp4" class="iq-video popup-youtube">
+                            <i class="ion-ios-play-outline"></i>
+                        </a>
+                        <div class="iq-waves">
+                            <div class="waves wave-1"></div>
+                            <div class="waves wave-2"></div>
+                            <div class="waves wave-3"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-7 col-md-7 iq-pall-50">
+                    <h2 class="heading-left iq-tw-6 ">Tentang Aplikasi yap!</h2>
+                    <p>Aplikasi yap! merupakan suatu solusi metode pembayaran yang memungkinkan Nasabah menjadi inisiator atas transaksi di merchant. Metode pembayaran ini memerlukan media berupa aplikasi mobile yang dimiliki oleh nasabah dan merchant. Metode pembayaran
+                        yang digunakan saat transaksi adalah dengan menggunakan QR Code scanner. Aplikasi yap! telah disediakan dalam Android dan iOS dan setiap device harus terkoneksi dengan jaringan internet</p>
+                    <a class="button iq-mt-15" href="# ">Download Manual Book</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="mekanism" class="overview-block-ptb">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <div class="heading-title">
+                        <h2 class="title iq-tw-6">Mekanisme Aplikasi yap!</h2>
+                        <div class="divider"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <img src="{{ app.request.basepath }}/public/assets/img/infografik.png" alt="" class="img-responsive infografik">
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6 mt-sm">
+                    <div class="row step iq-mb-15">
+                        <div class="col-xs-2 h72">
+                            <div class="iq-icon magical">
+                                1
+                            </div>
+                        </div>
+                        <div class="col-xs-10 tc">
+                            <span class="magical">Nasabah/Customer datang ke merchant</span>
+                        </div>
+                    </div>
+                    <div class="row step iq-mb-15">
+                        <div class="col-xs-2 h72">
+                            <div class="iq-icon magical">
+                                2
+                            </div>
+                        </div>
+                        <div class="col-xs-10 tc">
+                            <span class="magical">Merchant menampilkan QR Code sebagai media untuk transaksi</span>
+                        </div>
+                    </div>
+                    <div class="row step iq-mb-15">
+                        <div class="col-xs-2 h72">
+                            <div class="iq-icon magical">
+                                3
+                            </div>
+                        </div>
+                        <div class="col-xs-10 tc">
+                            <span class="magical">Nasabah/Customer login ke yap!</span>
+                        </div>
+                    </div>
+                    <div class="row step iq-mb-15">
+                        <div class="col-xs-2 h72">
+                            <div class="iq-icon magical">
+                                4
+                            </div>
+                        </div>
+                        <div class="col-xs-10 tc">
+                            <span class="magical">Nasabah/Customer melakukan scanning QR Code, input nominal transaksi dan Pin Kartu Kredit yang divalidasi oleh host Bank.</span>
+                        </div>
+                    </div>
+                    <div class="row step iq-mb-15">
+                        <div class="col-xs-2 h72">
+                            <div class="iq-icon magical">
+                                5
+                            </div>
+                        </div>
+                        <div class="col-xs-10 tc">
+                            <span class="magical">Transaksi berhasil. Notifikasi transaksi akan dikirimkan ke nasabah dan merchant</span>
+                        </div>
+                    </div>
+                    <div class="row step iq-mb-15">
+                        <div class="col-xs-2 h72">
+                            <div class="iq-icon magical">
+                                6
+                            </div>
+                        </div>
+                        <div class="col-xs-10 tc">
+                            <span class="magical">Transaksi Berhasil</span>
+                        </div>
+                    </div>
+                    <div class="jumbotron">
+                        <h5>Penggunaan 6 Digit PIN merupakan pemenuhan SEBI No. 16/25/DKSP/ Tanggal 31 Desember 2014</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="iq-home" class="banner iq-bg iq-bg-fixed iq-box-shadow" style=" background: url({{app.request.basepath}}/public/assets/img/header_blue.png);">
+        <div id="main-carousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#main-carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#main-carousel" data-slide-to="1"></li>
+                <li data-target="#main-carousel" data-slide-to="2"></li>
+                <li data-target="#main-carousel" data-slide-to="3"></li>
+                <li data-target="#main-carousel" data-slide-to="4"></li>
+                <li data-target="#main-carousel" data-slide-to="5"></li>
+                <li data-target="#main-carousel" data-slide-to="6"></li>
+                <li data-target="#main-carousel" data-slide-to="7"></li>
+                <li data-target="#main-carousel" data-slide-to="8"></li>
+                <li data-target="#main-carousel" data-slide-to="9"></li>
+                <li data-target="#main-carousel" data-slide-to="10"></li>
+            </ol>
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="heading-title">
+                      <h2 class="title iq-tw-6 iq-font-white">Cara Menggunakan yap!</h2>
+                      <div class="divider"></div>
+                      <!-- <p>YAP! adalah aplikasi yang menjadikan pembayaran menjadi lebih mudah. Banyak manfaat yang bisa anda dapatkan ketika mnejadikan YAP! bagian dari hidup anda.</p> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Wrapper for slides -->
+            <div class="container iq-mb-30">
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <div class="banner-text">
+                            <div class="row">
+                                <div class="col-sm-4 col-lg-4 col-md-4 hidden-xs">
+                                    <div class="img-one pull-left">
+                                        <img class="img-responsive center-block" data-animation="animated fadeInLeft" src="{{app.request.basepath}}/public/assets/img/step/transact/1.png" alt="#">
+                                    </div>
+                                </div>
+                                <div class="col-sm-8 col-lg-8 col-md-8 inner-text iq-pr-80">
+                                    <h3 class="iq-font-white iq-tw-8" data-animation="animated fadeInRight">Step 1</h3>
+                                    <h5 class="iq-mt-20 iq-font-white">Install Aplikasi yap! dari Play Store dan App Store gadget Kamu.</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2 -->
+                    <div class="item">
+                        <div class="banner-text">
+                            <div class="row">
+                                <div class="col-sm-4 col-lg-4 col-md-4 hidden-xs">
+                                    <div class="img-one pull-left">
+                                        <img class="img-responsive center-block" data-animation="animated fadeInLeft" src="{{app.request.basepath}}/public/assets/img/step/transact/2.png" alt="#">
+                                    </div>
+                                </div>
+                                <div class="col-sm-8 col-lg-8 col-md-8 inner-text iq-pr-80">
+                                    <h3 class="iq-font-white iq-tw-8" data-animation="animated fadeInRight">Step 2</h3>
+                                    <h5 class="iq-mt-20 iq-font-white">Setelah itu buka Aplikasi dan kamu akan menemukan keterangan User agreement</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3 -->
+                    <div class="item">
+                        <div class="banner-text">
+                            <div class="row">
+                                <div class="col-sm-4 col-lg-4 col-md-4 hidden-xs">
+                                    <div class="img-one pull-left">
+                                        <img class="img-responsive center-block" data-animation="animated fadeInLeft" src="{{app.request.basepath}}/public/assets/img/step/transact/3.png" alt="#">
+                                    </div>
+                                </div>
+                                <div class="col-sm-8 col-lg-8 col-md-8 inner-text iq-pr-80">
+                                    <h3 class="iq-font-white iq-tw-8" data-animation="animated fadeInRight">Step 3</h3>
+                                    <h5 class="iq-mt-20 iq-font-white">Muncul keterangan keamanan, pilih NEXT</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4 -->
+                    <div class="item">
+                        <div class="banner-text">
+                            <div class="row">
+                                <div class="col-sm-4 col-lg-4 col-md-4 hidden-xs">
+                                    <div class="img-one pull-left">
+                                        <img class="img-responsive center-block" data-animation="animated fadeInLeft" src="{{app.request.basepath}}/public/assets/img/step/transact/4.png" alt="#">
+                                    </div>
+                                </div>
+                                <div class="col-sm-8 col-lg-8 col-md-8 inner-text iq-pr-80">
+                                    <h3 class="iq-font-white iq-tw-8" data-animation="animated fadeInRight">Step 4</h3>
+                                    <h5 class="iq-mt-20 iq-font-white">Masukkan data Identitas kamu sesuai dengan form yang tersedia. jangan lupa membuat password untuk akses aplikasi yap!</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6 -->
+                    <div class="item">
+                        <div class="banner-text">
+                            <div class="row">
+                                <div class="col-sm-4 col-lg-4 col-md-4 hidden-xs">
+                                    <div class="img-one pull-left">
+                                        <img class="img-responsive center-block" data-animation="animated fadeInLeft" src="{{app.request.basepath}}/public/assets/img/step/transact/5.png" alt="#">
+                                    </div>
+                                </div>
+                                <div class="col-sm-8 col-lg-8 col-md-8 inner-text iq-pr-80">
+                                    <h3 class="iq-font-white iq-tw-8" data-animation="animated fadeInRight">Step 5</h3>
+                                    <h5 class="iq-mt-20 iq-font-white">Ketika data sudah lengkap, kamu akan menerima informasi sukses. lanjutkan dengan melakukan login.</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 7 -->
+                    <div class="item">
+                        <div class="banner-text">
+                            <div class="row">
+                                <div class="col-sm-4 col-lg-4 col-md-4 hidden-xs">
+                                    <div class="img-one pull-left">
+                                        <img class="img-responsive center-block" data-animation="animated fadeInLeft" src="{{app.request.basepath}}/public/assets/img/step/transact/6.png" alt="#">
+                                    </div>
+                                </div>
+                                <div class="col-sm-8 col-lg-8 col-md-8 inner-text iq-pr-80">
+                                    <h3 class="iq-font-white iq-tw-8" data-animation="animated fadeInRight">Step 6</h3>
+                                    <h5 class="iq-mt-20 iq-font-white">Kamu akan masuk ke halaman login, masukkan user dan password yang telah dibuat</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 8 -->
+                    <div class="item">
+                        <div class="banner-text">
+                            <div class="row">
+                                <div class="col-sm-4 col-lg-4 col-md-4 hidden-xs">
+                                    <div class="img-one pull-left">
+                                        <img class="img-responsive center-block" data-animation="animated fadeInLeft" src="{{app.request.basepath}}/public/assets/img/step/transact/7.png" alt="#">
+                                    </div>
+                                </div>
+                                <div class="col-sm-8 col-lg-8 col-md-8 inner-text iq-pr-80">
+                                    <h3 class="iq-font-white iq-tw-8" data-animation="animated fadeInRight">Step 7</h3>
+                                    <h5 class="iq-mt-20 iq-font-white">Selanjutnya akan masuk ke proses pemilihan kartu yang akan digunakan untuk transaksi / aktivasi yap!. Bisa pilih Kartu Debit, Kartu Kredit atau UNIKQU.</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 9 -->
+                    <div class="item">
+                        <div class="banner-text">
+                            <div class="row">
+                                <div class="col-sm-4 col-lg-4 col-md-4 hidden-xs">
+                                    <div class="img-one pull-left">
+                                        <img class="img-responsive center-block" data-animation="animated fadeInLeft" src="{{app.request.basepath}}/public/assets/img/step/transact/8.png" alt="#">
+                                    </div>
+                                </div>
+                                <div class="col-sm-8 col-lg-8 col-md-8 inner-text iq-pr-80">
+                                    <h3 class="iq-font-white iq-tw-8" data-animation="animated fadeInRight">Step 8</h3>
+                                    <h5 class="iq-mt-20 iq-font-white">Kemudian masukkan Nomer ID Kartu atau Akun UNIKQU</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 10 -->
+                    <div class="item">
+                        <div class="banner-text">
+                            <div class="row">
+                                <div class="col-sm-4 col-lg-4 col-md-4 hidden-xs">
+                                    <div class="img-one pull-left">
+                                        <img class="img-responsive center-block" data-animation="animated fadeInLeft" src="{{app.request.basepath}}/public/assets/img/step/transact/9.png" alt="#">
+                                    </div>
+                                </div>
+                                <div class="col-sm-8 col-lg-8 col-md-8 inner-text iq-pr-80">
+                                    <h3 class="iq-font-white iq-tw-8" data-animation="animated fadeInRight">Step 9</h3>
+                                    <h5 class="iq-mt-20 iq-font-white">Masukkan UNIKQU PIN yang sudah tersedia di akun UNIKQU kamu.</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 11 -->
+                    <div class="item">
+                        <div class="banner-text">
+                            <div class="row">
+                                <div class="col-sm-4 col-lg-4 col-md-4 hidden-xs">
+                                    <div class="img-one pull-left">
+                                        <img class="img-responsive center-block" data-animation="animated fadeInLeft" src="{{app.request.basepath}}/public/assets/img/step/transact/10.png" alt="#">
+                                    </div>
+                                </div>
+                                <div class="col-sm-8 col-lg-8 col-md-8 inner-text iq-pr-80">
+                                    <h3 class="iq-font-white iq-tw-8" data-animation="animated fadeInRight">Step 10</h3>
+                                    <h5 class="iq-mt-20 iq-font-white">Kode OTP akan dikirim melalui SMS ke Nomor yang sudah terdaftar. masukkan ke Kolom Kode OTP.</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 12 -->
+                    <div class="item">
+                        <div class="banner-text">
+                            <div class="row">
+                                <div class="col-sm-4 col-lg-4 col-md-4 hidden-xs">
+                                    <div class="img-one pull-left">
+                                        <img class="img-responsive center-block" data-animation="animated fadeInLeft" src="{{app.request.basepath}}/public/assets/img/step/transact/11.png" alt="#">
+                                    </div>
+                                </div>
+                                <div class="col-sm-8 col-lg-8 col-md-8 inner-text iq-pr-80">
+                                    <h3 class="iq-font-white iq-tw-8" data-animation="animated fadeInRight">Step 11</h3>
+                                    <h5 class="iq-mt-20 iq-font-white">Akun yap! kamu sudah bisa digunakan.</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {#<section id="screenshots" class="iq-app iq-bg iq-bg-fixed iq-font-white" style="background: url({{ app.request.basepath }}/public/assets/img/bg-2.png);" >#}
+        {#<div class="container-fluid">#}
+            {#<div class="row row-eq-height">#}
+                {#<div class="col-md-6 text-left iq-ptb-80 green-bg">#}
+                    {#<div class="iq-app-info">#}
+                        {#<h2 id="title-slider" class="heading-left iq-font-white white iq-tw-6 ">Tutorial Instalasi YAP!</h2>#}
+                        {#<p id="content-slider">#}
+                            {#<ul class="decimal-list">#}
+                                {#<li class="iq-tw-7 iq-uppercase">#}
+                                    {#Install Aplikasi YAP! dari Play Store dan App Store gadget Kamu.#}
+                                {#</li>#}
+                                {#<li>#}
+                                    {#Setelah itu buka Aplikasi dan kamu akan menemukan keterangan User agreement#}
+                                {#</li>#}
+                                {#<li>#}
+                                    {#Muncul keterangan keamanan, pilih NEXT#}
+                                {#</li>#}
+                                {#<li>#}
+                                    {#Masukkan data Identitas kamu sesuai dengan form yang tersedia. jangan lupa membuat password untuk akses aplikasi YAP!#}
+                                {#</li>#}
+                                {#<li>#}
+                                    {#Ketika data sudah lengkap, kamu akan menerima informasi sukses. lanjutkan dengan melakukan login.#}
+                                {#</li>#}
+                                {#<li>#}
+                                    {#Kamu akan masuk ke halaman login, masukkan user dan password yang telah dibuat#}
+                                {#</li>#}
+                                {#<li>#}
+                                    {#Selanjutnya akan masuk ke proses pemilihan kartu yang akan digunakan untuk transaksi / aktivasi YAP!. Bisa pilih Kartu Debit, Kartu Kredit atau UNIKQU. #}
+                                {#</li>#}
+                                {#<li>#}
+                                    {#Kemudian masukkan Nomer ID Kartu atau Akun UNIKQU#}
+                                {#</li>#}
+                                {#<li>#}
+                                    {#Masukkan UNIKQU PIN yang sudah tersedia di akun UNIKQU kamu.  #}
+                                {#</li>#}
+                                {#<li>#}
+                                    {#Kode OTP akan dikirim melalui SMS ke Nomor yang sudah terdaftar. masukkan ke Kolom Kode OTP.#}
+                                {#</li>#}
+                                {#<li>#}
+                                    {#Akun YAP! kamu sudah bisa digunakan#}
+                                {#</li>#}
+                            {#</ul>#}
+                        {#</p>#}
+                    {#</div>#}
+                {#</div>#}
+                {#<div class="col-md-6 iq-app-screen iq-ptb-80">#}
+                    {#<div class="home-screen-slide">#}
+                        {#<div class="owl-carousel popup-gallery" data-nav-dots="true" data-nav-arrow="false" data-items="3" data-sm-items="3" data-lg-items="3" data-md-items="2" data-autoplay="false">#}
+                            {#<div class="item">#}
+                                {#<a href="{{ app.request.basepath }}/public/assets/img/step/regist/regist-1.png" class="popup-img"><img class="img-responsive" src="{{ app.request.basepath }}/public/assets/img/step/regist/regist-1.png" alt="#"></a>#}
+                            {#</div>#}
+                            {#<div class="item">#}
+                                {#<a href="{{ app.request.basepath }}/public/assets/img/step/regist/regist-2.png" class="popup-img"><img class="img-responsive" src="{{ app.request.basepath }}/public/assets/img/step/regist/regist-2.png" alt="#"></a>#}
+                            {#</div>#}
+                            {#<div class="item">#}
+                                {#<a href="{{ app.request.basepath }}/public/assets/img/step/regist/regist-3.png" class="popup-img"><img class="img-responsive" src="{{ app.request.basepath }}/public/assets/img/step/regist/regist-3.png" alt="#"></a>#}
+                            {#</div>#}
+                            {#<div class="item">#}
+                                {#<a href="{{ app.request.basepath }}/public/assets/img/step/regist/regist-4.png" class="popup-img"><img class="img-responsive" src="{{ app.request.basepath }}/public/assets/img/step/regist/regist-4.png" alt="#"></a>#}
+                            {#</div>#}
+                            {#<div class="item">#}
+                                {#<a href="{{ app.request.basepath }}/public/assets/img/step/regist/regist-5.png" class="popup-img"><img class="img-responsive" src="{{ app.request.basepath }}/public/assets/img/step/regist/regist-5.png" alt="#"></a>#}
+                            {#</div>#}
+                            {#<div class="item">#}
+                                {#<a href="{{ app.request.basepath }}/public/assets/img/step/regist/regist-6.png" class="popup-img"><img class="img-responsive" src="{{ app.request.basepath }}/public/assets/img/step/regist/regist-6.png" alt="#"></a>#}
+                            {#</div>#}
+                        {#</div>#}
+                    {#</div>#}
+                {#</div>#}
+            {#</div>#}
+        {#</div>#}
+    {#</section>#}
+{% endblock %}

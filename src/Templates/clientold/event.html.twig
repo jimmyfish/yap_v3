@@ -1,0 +1,155 @@
+{% extends 'layouts/layout.html.twig' %}
+
+{% block title %}Promo &amp; Blog{% endblock %}
+
+{% block content %}
+    <section id="support" class="overview-block-ptb banner iq-bg iq-bg-fixed iq-box-shadow"
+             style=" background: url({{ app.request.basepath }}/public/assets/img/header_blue.png);">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="heading-title">
+                            <h2 class="title iq-tw-6">Promo &amp; Blog</h2>
+                            <div class="divider"></div>
+                            <p>Jangan sampai terlewat, selalu cek berbagai promo dan informasi terbaru mengenai YAP!
+                                disini.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </br> 
+    </br> </br> 
+    <section id="blog" class="overview-block-ptb white-bg iq-blog">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="heading-title">
+                        <h2 class="title iq-tw-6">Promo</h2>
+                        <div class="divider"></div>
+                        <!--p>Jangan sampai terlewat, selalu cek berbagai promo dan informasi terbaru mengenai YAP! di
+                            sini.</p-->
+                    </div>
+                </div>
+            </div>
+
+            {% if data['promo']|length > 0 %}
+                {% for item in data['promo'] %}
+                    <div class="col-sm-12 col-md-4">
+                        <div class="iq-blog-box">
+                            <div class="iq-blog-image clearfix">
+                                <img class="img-responsive center-block"
+                                     src="{{ app.request.basepath }}/public/photo/promo/{{ item.image }}" alt="#">
+                            </div>
+                            <div class="iq-blog-detail">
+                                <div class="blog-title">
+                                    <a href="{{ path('promo_detail', {id: item.id}) }}">
+                                        <h5 class="iq-tw-6 text-uppercase">
+                                            {{ item.title }}
+                                        </h5>
+                                    </a>
+                                </div>
+                                <div class="iq-blog-meta">
+                                    <ul class="list-inline">
+                                        <li>
+                                            <a href="#"><i class="fa fa-calendar" aria-hidden="true"></i>
+                                                &nbsp;{{ item.tanggalBerlakuAwal|date('d M y') }}
+                                            </a>
+                                        </li>
+                                        <li>
+                                            Kode Promo : <strong>{{ item.kodePromo }}</strong>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="blog-content">
+                                    {{ item.content|raw }}
+                                </div>
+                                <div class="blog-button">
+                                    <a href="#" class="pull-left iq-tw-6 iq-user">
+                                        <i class="fa fa-user-circle" aria-hidden="true"></i>
+                                        <span class="text-capitalize">{{ item.author.firstName }}</span>
+                                    </a>
+                                    <a href="{{ path('promo_detail', {id: item.id}) }}" class="pull-right iq-tw-6">Read
+                                        More
+                                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+
+            <div class="col-sm-12 text-center">
+                <a class="button iq-mt-50" href="{{ path('promo_list') }}">Semua Promo</a>
+            </div>
+        </div>
+    </section>
+    </br>
+    </br>
+    <section id="blog" class="overview-block-ptb white-bg iq-blog iq-pt-20">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="heading-title">
+                        <h2 class="title iq-tw-6">Blog</h2>
+                        <div class="divider"></div>
+                        {# <p>Jangan sampai terlewat, selalu cek berbagai promo dan informasi terbaru mengenai YAP! di sini.</p> #}
+                    </div>
+                </div>
+            </div>
+
+
+            {% if data['blog']|length > 0 %}
+                {% for item in data['blog'] %}
+                    <div class="col-sm-12 col-md-4">
+                        <div class="iq-blog-box">
+                            <div class="iq-blog-image clearfix">
+                                <img class="img-responsive center-block"
+                                     src="{{ app.request.basepath }}/public/photo/blog/{{ item.image }}" alt="#">
+                            </div>
+                            <div class="iq-blog-detail">
+                                <div class="blog-title">
+                                    <a href="{{ path('blog_detail', {id: item.id}) }}">
+                                        <h5 class="iq-tw-6 text-uppercase">
+                                            {{ item.title }}
+                                        </h5>
+                                    </a>
+                                </div>
+                                <div class="iq-blog-meta">
+                                    <ul class="list-inline">
+                                        <li>
+                                            <a href="#"><i class="fa fa-calendar" aria-hidden="true"></i>
+                                                &nbsp;{{ item.date|date('d M y') }}
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="blog-content">
+                                    {{ item.content|raw }}
+                                </div>
+                                <div class="blog-button">
+                                    <a href="#" class="pull-left iq-tw-6 iq-user">
+                                        <i class="fa fa-user-circle" aria-hidden="true"></i>
+                                        <span class="text-capitalize">{{ item.author.firstName }}</span>
+                                    </a>
+                                    <a href="{{ path('blog_detail', {id: item.id}) }}" class="pull-right iq-tw-6">Read
+                                        More
+                                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <a class="button iq-mt-50" href="{{ path('blog_list') }}">Semua Blog</a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
