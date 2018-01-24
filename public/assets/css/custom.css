@@ -53,3 +53,16 @@ NOTE: You can use your styling layout by this file to your website.
 .owl-controls {
   display: none;
 }
+
+.img-promo {
+  max-height: 300px;
+  height: auto;
+  object-fit: cover;
+  object-position: top;
+}
+
+.img-promo-detail {
+  max-height: 400px;
+  object-fit: cover;
+  object-position: top;
+}
