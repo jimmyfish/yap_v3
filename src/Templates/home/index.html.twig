@@ -110,11 +110,11 @@
                     <div class="iq-bg about-img popup-gallery play-video">
                         <img class="img-responsive center-block" src="{{ app.request.basepath }}/public/assets/img/scr3.png" alt="#">
                         <a href="{{ app.request.basepath }}/public/assets/video/main2.mp4" class="iq-video popup-youtube"><i class="ion-ios-play-outline"></i></a>
-                        <div class="iq-waves">
+                        <!--div class="iq-waves">
                             <div class="waves wave-1"></div>
                             <div class="waves wave-2"></div>
                             <div class="waves wave-3"></div>
-                        </div>
+                        </div-->
                     </div>
                 </div>
                 <div class="col-sm-12 col-lg-7 col-md-7 iq-pall-50">
@@ -252,7 +252,7 @@
                         <div class="col-sm-12 col-md-4">
                             <div class="iq-blog-box">
                                 <div class="iq-blog-image clearfix">
-                                    <img class="img-responsive center-block"
+                                    <img class="img-responsive center-block img-promo"
                                          src="{{ app.request.basepath }}/public/photo/promo/{{ item.image }}" alt="#">
                                 </div>
                                 <div class="iq-blog-detail">
@@ -274,9 +274,6 @@
                                                 Kode Promo : <strong>{{ item.kodePromo }}</strong>
                                             </li>
                                         </ul>
-                                    </div>
-                                    <div class="blog-content">
-                                        {{ item.content|raw }}
                                     </div>
                                     <div class="blog-button">
                                         <a href="#" class="pull-left iq-tw-6 iq-user">

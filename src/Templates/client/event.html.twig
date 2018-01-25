@@ -20,8 +20,8 @@
             </div>
         </div>
     </section>
-    </br> 
-    </br> </br> 
+    </br>
+    </br> </br>
     <section id="blog" class="overview-block-ptb white-bg iq-blog">
         <div class="container">
             <div class="row">
@@ -40,7 +40,7 @@
                     <div class="col-sm-12 col-md-4">
                         <div class="iq-blog-box">
                             <div class="iq-blog-image clearfix">
-                                <img class="img-responsive center-block"
+                                <img class="img-responsive center-block img-promo"
                                      src="{{ app.request.basepath }}/public/photo/promo/{{ item.image }}" alt="#">
                             </div>
                             <div class="iq-blog-detail">
@@ -62,9 +62,6 @@
                                             Kode Promo : <strong>{{ item.kodePromo }}</strong>
                                         </li>
                                     </ul>
-                                </div>
-                                <div class="blog-content">
-                                    {{ item.content|raw }}
                                 </div>
                                 <div class="blog-button">
                                     <a href="#" class="pull-left iq-tw-6 iq-user">
@@ -107,7 +104,7 @@
                     <div class="col-sm-12 col-md-4">
                         <div class="iq-blog-box">
                             <div class="iq-blog-image clearfix">
-                                <img class="img-responsive center-block"
+                                <img class="img-responsive center-block img-promo"
                                      src="{{ app.request.basepath }}/public/photo/blog/{{ item.image }}" alt="#">
                             </div>
                             <div class="iq-blog-detail">
@@ -126,9 +123,6 @@
                                             </a>
                                         </li>
                                     </ul>
-                                </div>
-                                <div class="blog-content">
-                                    {{ item.content|raw }}
                                 </div>
                                 <div class="blog-button">
                                     <a href="#" class="pull-left iq-tw-6 iq-user">

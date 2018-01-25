@@ -21,16 +21,15 @@
         <div class="container">
             <div class="row row-eq-height">
                 <div class="col-sm-12 col-lg-5 col-md-5 iq-about-bg">
-                    <div class="iq-bg about-img popup-gallery play-video">
-                        <img class="img-responsive center-block" src="{{ app.request.basepath }}/public/assets/img/scr3.png" alt="#">
-                        <a href="{{ app.request.basepath }}/public/assets/video/main.mp4" class="iq-video popup-youtube">
-                            <i class="ion-ios-play-outline"></i>
-                        </a>
-                        <div class="iq-waves">
+                    <!--div class="iq-bg about-img popup-gallery play-video"-->
+                     <div class="videoWrapper">
+                      <iframe width="475" height="421" src="https://www.youtube.com/embed/BZeoSfwI23I" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        <!--div class="iq-waves">
                             <div class="waves wave-1"></div>
                             <div class="waves wave-2"></div>
                             <div class="waves wave-3"></div>
                         </div>
+                    </div-->
                     </div>
                 </div>
                 <div class="col-sm-12 col-lg-7 col-md-7 iq-pall-50">
@@ -42,7 +41,6 @@
             </div>
         </div>
     </section>
-    </br> </br></br> </br>
     <section class="overview-block-ptb white-bg">
         <div class="container">
             <div class="row">
@@ -160,5 +158,4 @@
             </div>
         </div>
     </section>
-    </br> </br>
 {% endblock %}
