@@ -57,6 +57,39 @@ NOTE: This is main stylesheet of template, This file contains the styling for th
 /*---------------------------------------------------------------------
                                General
 -----------------------------------------------------------------------*/
+
+body { font-family: 'Open Sans', sans-serif; font-weight: normal; font-style: normal; font-size: 14px; line-height: 24px; color: #666666; overflow-x: hidden; }
+a, .button { transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; -webkit-transition: all 0.5s ease-in-out; color: #333333; }
+a:focus { text-decoration: none !important; }
+a:focus, a:hover { color: #1e50e2; text-decoration: none !important; }
+a, .button, input { outline: medium none !important; color: #1e50e2; }
+h1, h2, h3, h4, h5, h6 { font-family: 'Raleway', sans-serif; font-weight: normal; color: #333333; margin-top: 0px; margin-bottom: 0px; }
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { color: inherit; }
+h1 { font-size: 32px; font-style: normal; line-height: 66px; }
+h2 { font-size: 24px; font-style: normal; line-height: 44px; }
+h3 { font-size: 18px; font-style: normal; line-height: 42px; }
+h4 { font-size: 16px; font-style: normal; line-height: 24px; }
+h5 { font-size: 13px; font-style: normal; line-height: 30px; }
+h6 { font-size: 11px; font-style: normal; line-height: 28px; }
+.lead { font-size: 16px; line-height: 24px; margin: 0; }
+ul { margin: 0px; padding: 0px; }
+li { list-style: none; }
+hr { margin: 0; padding: 0px; border-bottom: 1px solid #e0e0e0; border-top: 0px; }
+label { font-size: 15px; font-weight: 400; color: #aaaaaa; }
+.label { color: #fff !important; font-size: 9px !important; }
+blockquote { border-left: 5px solid #1e50e2; font-size: 16px; }
+*::-moz-selection { background: #1e50e2; color: #fff; text-shadow: none; }
+::-moz-selection { background: #1e50e2; color: #fff; text-shadow: none; }
+::selection { background: #1e50e2; color: #fff; text-shadow: none; }
+.valign, .valign > [class*='col-'] { display: table-cell; float: none; }
+[data-valign-overlay="top"] { vertical-align: top; }
+[data-valign-overlay="bottom"] { vertical-align: bottom; }
+[data-valign-overlay="middle"] { vertical-align: middle; }
+.no-gutter > [class*='col-'] { padding-right: 0; padding-left: 0; }
+.row-eq-height { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; }
+.no-padding { padding: 0px !important; }
+.no-border { border: none !important; }
+
 @font-face {
   font-family: 'GothamRoundBook';
   src: url('../fonts/GothamRoundedBook_21018.ttf');
@@ -82,11 +115,11 @@ NOTE: This is main stylesheet of template, This file contains the styling for th
 }
 
 body {
-  font-family: 'GothamRoundBook', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: normal;
   font-style: normal;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 30px;
   color: #666666;
   overflow-x: hidden;
 }
@@ -116,7 +149,7 @@ a, .button, input {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'GothamRound', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: normal;
   color: #333333;
   margin-top: 0px;
@@ -124,7 +157,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
-  font-size: 19px;
+  font-size: 15px;
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -1639,8 +1672,8 @@ header .navbar-default .navbar-nav li:last-child {
 header .navbar-default .navbar-nav>li>a {
   color: #ffffff;
   padding: 10px 0;
-  font-family: 'GothamRound', sans-serif;
-  font-size: 15px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
 }
 
 header .navbar-default .navbar-nav>li>a:hover, header .navbar-default .navbar-nav>li>a:focus, header .navbar-default .navbar-nav>li.active>a, header .navbar-default .navbar-nav>li.active>a:focus, header .navbar-default .navbar-nav>li.active>a:hover {
@@ -1709,10 +1742,11 @@ header.affix .navbar-default {
   text-shadow: 0px 20px 10px rgba(0, 0, 0, 0.1);
   margin-top: 6%;
   letter-spacing: 2px;
+  font-family: 'GothamRound', sans-serif;
 }
 
 .banner-text h1 small {
-  font-family: 'GothamRoundBook';
+  font-family: 'Open Sans';
   font-size: 20px;
   display: block;
   text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);

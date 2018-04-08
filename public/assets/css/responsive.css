@@ -94,7 +94,7 @@ NOTE: This file contains the styling for responsive Template.
 }
 @media(max-width:979px) { }
 @media(max-width:767px) {
-	h2 { font-size: 32px; }
+	h2 { font-size: 25px; }
 	header .navbar-default { margin: 10px 0; }
 	.navbar-default .navbar-toggle, .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus { margin: 15px 0 0 0; border-color: #fff; background: #fff; transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; -webkit-transition: all 0.5s ease-in-out; }
 	.navbar-default .navbar-toggle .icon-bar { background: #09b3ef; }
