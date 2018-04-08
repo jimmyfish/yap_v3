@@ -62,7 +62,6 @@ NOTE: You can use your styling layout by this file to your website.
 }
 
 .img-promo-detail {
-  max-height: 400px;
   object-fit: cover;
   object-position: top;
 }
