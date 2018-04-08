@@ -114,6 +114,31 @@ blockquote { border-left: 5px solid #1e50e2; font-size: 16px; }
   font-weight: 300;
 }
 
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('../fonts/Raleway-Light.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url('../fonts/Ralewat-Medium.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url('../fonts/Raleway-Bold.ttf');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url('../fonts/Raleway-SemiBold.ttf');
+  font-weight: 300;
+}
+
 body {
   font-family: 'Raleway', sans-serif;
   font-weight: normal;
