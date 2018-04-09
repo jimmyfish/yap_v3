@@ -1751,7 +1751,7 @@ header.affix .navbar-default {
 -----------------------------------------------------------------------*/
 .banner-text {
   color: #fff;
-  font-family: 'GothamRound', sans-serif;
+  font-family: 'Raleway', sans-serif;
   margin: 18% 0 8%;
 }
 
@@ -1778,6 +1778,7 @@ header.affix .navbar-default {
   line-height: 30px;
 }
 
+
 .banner-text .link h5 {
   font-family: 'GothamRound'
   margin-bottom: 10px;
@@ -1785,6 +1786,7 @@ header.affix .navbar-default {
   display: inline-block;
   font-size: 14px;
 }
+
 
 /*.banner-text .link h5:before { position: absolute; top: 20px; right: -25px; content: ""; background: url('../images/arrow.png') no-repeat 0 0; width: 61px; height: 58px; }*/
 
