@@ -1761,13 +1761,13 @@ header.affix .navbar-default {
 
 .banner-text h1 {
   font-weight: 700;
-  font-size: 90px;
-  line-height: 80px;
+  font-size: 95px;
+  line-height: 90px;
   margin-bottom: 30px;
   text-shadow: 0px 20px 10px rgba(0, 0, 0, 0.1);
   margin-top: 15%;
   letter-spacing: 2px;
-  font-family: 'GothamRound', sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 .banner-text h1 small {
