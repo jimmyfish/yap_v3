@@ -1729,12 +1729,12 @@ header.affix {
   -moz-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
   background: rgba(97, 190, 186, 1);
-  background: -moz-linear-gradient(left, rgba(97, 190, 186, 1) 0%, rgba(0, 88, 161, 1) 100%);
-  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(97, 190, 186, 1)), color-stop(100%, rgba(0, 88, 161, 1)));
-  background: -webkit-linear-gradient(left, rgba(97, 190, 186, 1) 0%, rgba(0, 88, 161, 1) 100%);
-  background: -o-linear-gradient(left, rgba(97, 190, 186, 1) 0%, rgba(0, 88, 161, 1) 100%);
-  background: -ms-linear-gradient(left, rgba(97, 190, 186, 1) 0%, rgba(0, 88, 161, 1) 100%);
-  background: linear-gradient(to right, rgba(9, 179, 239, 1) 0%, rgba(30, 80, 226, 1) 100%);
+  background: -moz-linear-gradient(left, rgba(9, 179, 239, 1) 0%, rgba(30, 80, 226, 1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(9, 179, 239, 1)), color-stop(100%, rgba(30, 80, 226, 1)));
+  background: -webkit-linear-gradient(left, rgba(9, 179, 239, 1) 0%, rgba(30, 80, 226, 1) 100%)
+  background: -o-linear-gradient(left,  rgba(9, 179, 239, 1) 0%, rgba(30, 80, 226, 1)100%);
+  background: -ms-linear-gradient(left,  rgba(9, 179, 239, 1) 0%, rgba(30, 80, 226, 1) 100%);
+  background: linear-gradient(to right,  rgba(9, 179, 239, 1) 0%, rgba(30, 80, 226, 1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#61BEBA', endColorstr='#0058a1', GradientType=1);
 }
 
