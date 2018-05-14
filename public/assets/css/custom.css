@@ -59,6 +59,7 @@ NOTE: You can use your styling layout by this file to your website.
   height: auto;
   object-fit: cover;
   object-position: top;
+  padding-top:20px;
 }
 
 .img-promo-detail {
