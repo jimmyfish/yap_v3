@@ -31,9 +31,9 @@
                         <div class="iq-blog-box">
                             <div class="iq-blog-image clearfix">
                                 {% if (event_type == 0) %}
-                                    <img class="img-responsive center-block" src="{{ app.request.basepath }}/public/photo/promo/{{ item.image }}" alt="#">
+                                    <img class="img-responsive center-block img-promo" src="{{ app.request.basepath }}/public/photo/promo/{{ item.image }}" alt="#">
                                     {% else %}
-                                        <img class="img-responsive center-block" src="{{ app.request.basepath }}/public/photo/blog/{{ item.image }}" alt="#">
+                                        <img class="img-responsive center-block img-promo" src="{{ app.request.basepath }}/public/photo/blog/{{ item.image }}" alt="#">
                                 {% endif %}
                             </div>
                             <div class="iq-blog-detail">
